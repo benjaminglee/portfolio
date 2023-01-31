@@ -1,9 +1,9 @@
-import Sidebar from './Sidebar';
+import Navbar from './navbar/Navbar';
 
 const Main = () => {
   return (
     <>
-      <Sidebar />
+      <Navbar />
       <div>Hello this is the main page</div>
     </>
   );
