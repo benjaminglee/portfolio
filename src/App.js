@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Main from './components/Main';
+import Main from './components/main/Main';
 import { GlobalStyles } from './styles/global';
 
 function App() {

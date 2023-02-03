@@ -11,7 +11,8 @@ const BurgerLayout = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => (open ? 'grey' : 'black')};
+    background-color: ${({ open, theme }) =>
+      open ? theme.colors.background : theme.colors.darkRed};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s ease-in-out;
@@ -20,7 +21,6 @@ const BurgerLayout = styled.div`
       transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
     }
     &:nth-child(2) {
-      transform: ${({ open }) => (open ? 'translateX(30%)' : 'translateX(0%)')};
       opacity: ${({ open }) => (open ? 0 : 1)};
     }
     &:nth-child(3) {

@@ -4,7 +4,7 @@ import RightNavLayout from './RightNav.layout';
 const RightNav = ({ open }) => {
   return (
     <RightNavLayout open={open}>
-      <nav className="navbar">
+      <nav className="navbar-right">
         <div className="linkwrapper">
           <NavLink to="/about">About</NavLink>
         </div>

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const RightNavLayout = styled.div`
-  .navbar {
-    display: flex;
+  .navbar-right {
+    display: none;
 
     a {
       padding: 10px;
@@ -10,6 +10,7 @@ const RightNavLayout = styled.div`
     }
 
     @media (max-width: 768px) {
+      display: flex;
       flex-direction: column;
       position: fixed;
       transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(200%)')};
@@ -17,6 +18,7 @@ const RightNavLayout = styled.div`
       right: 0;
       height: 100vh;
       width: 300px;
+      background-color: brown;
       transition: transform 0.3s ease-in-out;
     }
   }
