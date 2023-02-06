@@ -5,7 +5,7 @@ const MainLayout = styled.div`
     scroll-snap-align: start;
   }
   .desc-background {
-    background-color: rgba(255, 255, 255, 0.7);
+    // background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
   }
   .name {
@@ -13,20 +13,20 @@ const MainLayout = styled.div`
     padding: 1rem;
     margin: 1rem;
     pointer-events: none;
-    color: ${({ theme }) => theme.colors.red};
+    color: ${({ theme }) => theme.colors.orange};
     a {
       pointer-events: auto;
       text-decoration: none;
-      color: ${({ theme }) => theme.colors.yellow};
+      color: ${({ theme }) => theme.colors.pale};
       text-decoration: underline;
-      text-decoration-color: ${({ theme }) => theme.colors.purple};
+      text-decoration-color: ${({ theme }) => theme.colors.lightOrange};
     }
     a:hover {
       color: ${({ theme }) => theme.colors.purple};
     }
     span {
-      color: ${({ theme }) => theme.colors.red};
-      font-size: 2.5rem;
+      color: ${({ theme }) => theme.colors.orange};
+      font-size: 3rem;
     }
   }
   .desc {
@@ -34,15 +34,15 @@ const MainLayout = styled.div`
     padding: 1rem;
     margin: 1rem;
     pointer-events: none;
-    color: ${({ theme }) => theme.colors.red};
+    color: ${({ theme }) => theme.colors.orange};
     span {
-      color: ${({ theme }) => theme.colors.yellow};
-      font-size: 2rem;
+      color: ${({ theme }) => theme.colors.pale};
+      font-size: 2.8rem;
     }
     a {
       pointer-events: auto;
       text-decoration: none;
-      color: ${({ theme }) => theme.colors.yellow};
+      color: ${({ theme }) => theme.colors.pale};
     }
     a:hover {
       color: ${({ theme }) => theme.colors.purple};
@@ -55,10 +55,12 @@ const MainLayout = styled.div`
     align-items: center;
     justify-content: center;
   }
-  .projects {
+  .project {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .contact {
     height: 100vh;
@@ -81,12 +83,13 @@ const MainLayout = styled.div`
   }
 
   @media (max-width: 768px) {
-      .projectWrapper{
-        flex-direction:column;
-        img{
-          height:20vh;
-        }
+    .projectWrapper {
+      flex-direction: column;
+      img {
+        height: 20vh;
+      }
     }
+  }
 `;
 
 export default MainLayout;

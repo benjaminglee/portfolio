@@ -1,10 +1,13 @@
 import Navbar from '../navbar/Navbar';
 import MainLayout from './Main.layout';
 import { theme } from '../../styles/constants';
-
+import slides from '../slider/slides';
+import Slider from '../slider/Slider';
+import ParticlesBackground from '../particles/ParticlesBackground';
 const Main = () => {
   return (
     <MainLayout theme={theme}>
+      <ParticlesBackground />
       <Navbar />
       <section className="hero" id="hero">
         <div className="desc-background">
@@ -49,7 +52,8 @@ const Main = () => {
       </section>
       <section className="about" id="about"></section>
       <section className="project" id="project">
-        <div className="projectWrapper" id="project1">
+        <Slider slides={slides} />
+        {/* <div className="projectWrapper" id="project1">
           <img src="../../project1.png" />
           <div className="projectDesc">
             <h3>BluePrint</h3>
@@ -90,9 +94,11 @@ const Main = () => {
             </p>
             <p>Technologies used: React JS, Redux, Framer Motion</p>
           </div>
-        </div>
+        </div> */}
       </section>
-      <section className="contact" id="contact"></section>
+      <section className="contact" id="contact">
+        <div></div>
+      </section>
     </MainLayout>
   );
 };

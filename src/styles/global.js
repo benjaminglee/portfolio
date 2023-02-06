@@ -9,7 +9,7 @@ body {
     margin: 0px 0px 0px 0px; 
     padding: 0px 0px 0px 0px; 
     font-size: 20px;
-    background-image: linear-gradient(white, #65c1e6);
+    background-color: #2C0A2D;
 }
-html{scroll-behavior:smooth; scroll-snap-type: y proximity; scroll-padding:67px;}
+//html{scroll-behavior:smooth; scroll-snap-type: y proximity; scroll-padding:67px;}
 `;

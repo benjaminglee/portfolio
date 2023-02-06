@@ -2,14 +2,16 @@ import RightNav from './RightNav';
 import Burger from './Burger';
 import NavbarLayout from './Navbar.layout';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { theme } from '../../styles/constants';
 
 const Navbar = () => (
-  <NavbarLayout theme={theme}>
+  <NavbarLayout>
     <div className="navbar-main">
-      <div className="logo">
-        <a href="#hero">BenLee</a>
-      </div>
+      <a href="#hero">
+        <div className="logo">
+          <div className="first">B</div>
+          <div className="last">B</div>
+        </div>
+      </a>
       <nav className="navbar">
         <div className="linkwrapper">
           <a href="#about">About</a>

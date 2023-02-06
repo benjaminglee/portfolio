@@ -1,10 +1,11 @@
 export const theme = {
   colors: {
-    background: '#1A1A1D',
-    grey: '#4E4E50',
-    yellow: '#fcda68',
-    darkRed: '#cde9f7',
-    purple: '#cde9f7',
-    red: '#65c1e6',
+    foreground: '#2C0A2D',
+    red: '#BD1642',
+    darkRed: '#4C002B',
+    orange: '#F5554B',
+    lightOrange: '#F87D5C',
+    pale: '#FDD9CB',
+    white: '#FFFFFF',
   },
 };
