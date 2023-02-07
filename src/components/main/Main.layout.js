@@ -61,14 +61,82 @@ const MainLayout = styled.div`
     font-size: 2.5rem;
   }
   h3 {
-    color: ${({ theme }) => theme.colors.orange};
+    color: ${({ theme }) => theme.colors.lightOrange};
     font-weight: 500;
     font-size: 1.75rem;
     margin-top: 100px;
   }
   .about {
-    color: ${({ theme }) => theme.colors.pale};
+    color: ${({ theme }) => theme.colors.orange};
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    padding: 15px;
+    .about-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1100px;
+    }
+    .answer {
+      position: relative;
+      background-color: ${({ theme }) => theme.colors.darkRed};
+      margin: 10px;
+      width: 75%;
+      max-width: 800px;
+      align-self: flex-start;
+      border-radius: 10px;
+      padding: 0 10px;
+    }
+    .answer-right {
+      position: relative;
+      background-color: ${({ theme }) => theme.colors.darkRed};
+      margin: 10px;
+      width: 75%;
+      max-width: 800px;
+      align-self: flex-end;
+      border-radius: 10px;
+      padding: 0 10px;
+    }
+    .answer-right:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-left-color: ${({ theme }) => theme.colors.darkRed};
+      border-right: 0;
+      border-bottom: 0;
+      margin-top: -10px;
+      margin-right: -20px;
+    }
+    .answer:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-right-color: ${({ theme }) => theme.colors.darkRed};
+      border-left: 0;
+      border-bottom: 0;
+      margin-top: -10px;
+      margin-left: -20px;
+    }
+    .question-left {
+      align-self: flex-start;
+    }
+    .question-right {
+      align-self: flex-end;
+    }
+    span {
+      color: ${({ theme }) => theme.colors.pale};
+    }
   }
   .project {
     display: flex;
@@ -112,6 +180,27 @@ const MainLayout = styled.div`
   }
   .contact {
     height: 100vh;
+  }
+  .contact-main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .contact-text {
+    width: 40%;
+    color: ${({ theme }) => theme.colors.orange};
+  }
+  .map-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    iframe {
+      width: 100%;
+      height: 100%;
+      max-width: 1000px;
+    }
   }
 `;
 

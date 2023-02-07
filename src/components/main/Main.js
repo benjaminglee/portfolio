@@ -52,25 +52,46 @@ const Main = () => {
       </section>
       <section className="about" id="about">
         <h2>A Little About Me...</h2>
-        <h3>Who am I?</h3>
-        <div>
-          I'm a software engineer based in Chicago, IL.
-          <h3>What do you do?</h3>
-          <div>
-            I'm a trained artist, an avid chess player, and an enthusiastic
-            hiker. I love working alongside positive and productive people. I'm
-            a big team player, a bigger problem solver, and the biggest nerd.
+        <div className="about-main">
+          <h3 className="question-left">Who am I?</h3>
+          <div className="answer">
+            <p>
+              {' '}
+              I'm a <span>software engineer</span> based in{' '}
+              <span>Chicago, IL</span>.
+            </p>
           </div>
-          <h3>But like, what do you do do?</h3>
-          <div>
-            I'm well-versed in javascript development, meaning I'm just as happy
-            designing databases as I am keying out complex animations. My
-            current stack includes React, Redux, Styled-Components/LESS, Node,
-            Express, Sequelize, PostgreSQL/MySQL. I'm currently learning GraphQL
-            at work and I'm studying Java on my own.
+          <h3 className="question-right">What do I do?</h3>
+          <div className="answer-right">
+            <p>
+              I'm a trained <span>artist</span>, an avid chess player, and an
+              enthusiastic hiker. I love working alongside{' '}
+              <span>positive and productive</span> people. I'm a big{' '}
+              <span>team player</span>, a bigger <span>problem solver</span>,
+              and the biggest nerd.
+            </p>
+          </div>
+          <h3 className="question-left">
+            But like, what do I{' '}
+            <span>
+              <em>do</em>
+            </span>{' '}
+            do?
+          </h3>
+          <div className="answer">
+            <p>
+              I'm well-versed in <span>javascript development</span>, meaning
+              I'm just as happy <span>designing databases</span> as I am keying
+              out <span>complex animations</span>. My current stack includes{' '}
+              <span>React</span>, <span>Redux</span>,{' '}
+              <span>Styled-Components</span>, <span>LESS</span>,{' '}
+              <span>Node</span>, <span>Express</span>, <span>Sequelize</span>,
+              and <span>PostgreSQL</span>. I'm currently learning{' '}
+              <span>GraphQL</span> at work, and I'm studying <span>Java</span>{' '}
+              on my own.
+            </p>
           </div>
         </div>
-        <div></div>
       </section>
 
       <section className="project" id="project">
@@ -164,7 +185,23 @@ const Main = () => {
         </div>
       </section>
       <section className="contact" id="contact">
-        <div></div>
+        <h2>Contact Me!</h2>
+        <div className="contact-main">
+          <div className="contact-text">
+            <p>
+              I'm currently looking for a full-time role, though I'm open to
+              other opportunites. Don't hesitate to reach out with any
+              questions.
+            </p>
+            <p>Get in touch with me via:</p>
+            <p>benjaminlee0727@gmail.com</p>
+            <p>&</p>
+            <p>LinkedIn</p>
+          </div>
+          <div className="map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33997.69821304711!2d-87.70018472935685!3d41.90432088687726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2c5d9cb201f%3A0x9c95d9bc940da12f!2sWicker%20Park%2C%20Chicago%2C%20IL!5e0!3m2!1sen!2sus!4v1675744685946!5m2!1sen!2sus"></iframe>
+          </div>
+        </div>
       </section>
     </MainLayout>
   );
