@@ -2,16 +2,28 @@ import styled from 'styled-components';
 
 const SliderLayout = styled.div`
   width: 90%;
-  max-width: 1000px;
+  max-width: 700px;
   z-index: 1;
   .imageContainer {
     position: relative;
   }
   img {
     border: 1px solid ${(p) => p.theme.colors.pale};
-    max-width: 1000px;
+    max-width: 700px;
     width: 100%;
     object-fit: scale-down;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    transition: transform 0.3s;
+  }
+  .imageContainer:hover {
+    img {
+      transform: scale(1.03);
+      transition-timing-function: ease-in-out;
+    }
   }
   .sliderButton {
     height: 50px;

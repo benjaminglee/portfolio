@@ -6,11 +6,13 @@ import Circle from './Circle';
 
 const Slider = ({ slides }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
-  const handlePrev = () => {
+  const handlePrev = (e) => {
+    e.preventDefault();
     if (currentIdx > 0) setCurrentIdx(currentIdx - 1);
     else setCurrentIdx(slides.length - 1);
   };
-  const handleNext = () => {
+  const handleNext = (e) => {
+    e.preventDefault();
     if (currentIdx < slides.length - 1) setCurrentIdx(currentIdx + 1);
     else setCurrentIdx(0);
   };

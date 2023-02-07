@@ -22,7 +22,7 @@ const MainLayout = styled.div`
       text-decoration-color: ${({ theme }) => theme.colors.lightOrange};
     }
     a:hover {
-      color: ${({ theme }) => theme.colors.purple};
+      color: ${({ theme }) => theme.colors.red};
     }
     span {
       color: ${({ theme }) => theme.colors.orange};
@@ -45,7 +45,7 @@ const MainLayout = styled.div`
       color: ${({ theme }) => theme.colors.pale};
     }
     a:hover {
-      color: ${({ theme }) => theme.colors.purple};
+      color: ${({ theme }) => theme.colors.red};
     }
   }
   .hero {
@@ -55,40 +55,63 @@ const MainLayout = styled.div`
     align-items: center;
     justify-content: center;
   }
+  h2 {
+    color: ${({ theme }) => theme.colors.pale};
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+  h3 {
+    color: ${({ theme }) => theme.colors.orange};
+    font-weight: 500;
+    font-size: 1.75rem;
+    margin-top: 100px;
+  }
+  .about {
+    color: ${({ theme }) => theme.colors.pale};
+    min-height: 100vh;
+  }
   .project {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-weight: 400;
+    &-info {
+      background-color: ${({ theme }) => theme.colors.darkRed};
+      max-width: 600px;
+      padding: 10px;
+      border-radius: 5px;
+      width: 75%;
+      color: ${({ theme }) => theme.colors.pale};
+      font-size: 1rem;
+      .button-container {
+        display: flex;
+        justify-content: center;
+        button {
+          background-color: ${({ theme }) => theme.colors.red};
+          width: 70px;
+          height: 30px;
+          border: none;
+          margin: 0 10px 0 0;
+          cursor: pointer;
+          border-radius: 3px;
+          font-weight: 600;
+          color: ${({ theme }) => theme.colors.darkRed};
+          &:hover {
+            color: ${({ theme }) => theme.colors.pale};
+          }
+        }
+      }
+    }
+    .skills {
+      color: ${({ theme }) => theme.colors.lightOrange};
+      span {
+        color: ${({ theme }) => theme.colors.orange};
+      }
+    }
   }
   .contact {
     height: 100vh;
-  }
-  .projectWrapper {
-    display: flex;
-    border-radius: 5px;
-    margin-bottom: 3rem;
-    img {
-      height: 40vh;
-      width: auto;
-    }
-  }
-  .projectDesc {
-    padding: 2rem;
-    background-color: orange;
-    border-radius: 10px;
-    margin: 10px;
-    max-width: 800px;
-  }
-
-  @media (max-width: 768px) {
-    .projectWrapper {
-      flex-direction: column;
-      img {
-        height: 20vh;
-      }
-    }
   }
 `;
 
