@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 
 const MainLayout = styled.div`
+  .moon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    background-color: white;
+  }
   overflow-x: hidden;
+  overflow-y: auto;
   section {
     scroll-snap-align: start;
   }

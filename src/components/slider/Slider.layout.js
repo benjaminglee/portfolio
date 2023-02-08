@@ -8,7 +8,8 @@ const SliderLayout = styled.div`
     position: relative;
   }
   img {
-    border: 1px solid ${(p) => p.theme.colors.pale};
+    border: 4px solid #c29895;
+    border-radius: 10px;
     max-width: 700px;
     width: 100%;
     object-fit: scale-down;
@@ -26,17 +27,17 @@ const SliderLayout = styled.div`
     }
   }
   .sliderButton {
-    height: 50px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10%;
+    border-radius: 50%;
     position: absolute;
     top: calc(50% - 20px);
-    left: -10px;
+    left: -20px;
     cursor: pointer;
   }
   .sliderButton:hover {
@@ -44,7 +45,7 @@ const SliderLayout = styled.div`
   }
   #next {
     left: initial;
-    right: -10px;
+    right: -25px;
   }
   .legend {
     width: 100%;
