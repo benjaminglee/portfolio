@@ -99,9 +99,9 @@ const Main = () => {
       <section className="projects" id="project">
         <h2>Projects</h2>
         <div className="singleProject">
-          <h3 className="projectTitle">BluePrint</h3>
           <Slider slides={slides[0]} />
           <div className="project-info">
+            <h3 className="projectTitle">BluePrint</h3>
             <p>
               A toolkit website that allows developers to share and create
               sample buttons, forms, and other web elements. Users can like and
@@ -131,9 +131,9 @@ const Main = () => {
           </div>
         </div>
         <div className="singleProject">
-          <h3 className="projectTitle">Tickit</h3>
           <Slider slides={slides[1]} />
           <div className="project-info">
+            <h3 className="projectTitle">Tickit</h3>
             <p>
               An E-commerce website designed around events. Users can search and
               sort by keyword, location, and date, purchase specific seats, add
@@ -162,9 +162,9 @@ const Main = () => {
           </div>
         </div>
         <div className="singleProject">
-          <h3 className="projectTitle">Picky!</h3>
           <Slider slides={slides[2]} />
           <div className="project-info">
+            <h3 className="projectTitle">Picky!</h3>
             <p>
               A fun project completed over 3 days during Fullstack Academy's
               Hackathon. Users can save interactable recipe cards generated

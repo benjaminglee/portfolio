@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const SliderLayout = styled.div`
-  width: 90%;
+  width: 80%;
   max-width: 700px;
   z-index: 1;
   .imageContainer {

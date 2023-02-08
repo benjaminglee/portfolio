@@ -148,11 +148,13 @@ const MainLayout = styled.div`
       align-items: center;
       margin-bottom: 150px;
       .projectTitle {
+        margin: 0;
       }
       .project-info {
+        margin-top: 5px;
         background-color: ${({ theme }) => theme.colors.darkRed};
-        max-width: 600px;
-        padding: 10px;
+        max-width: 800px;
+        padding: 20px;
         border-radius: 5px;
         width: 75%;
         color: ${({ theme }) => theme.colors.pale};

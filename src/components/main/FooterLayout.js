@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const FooterLayout = styled.div`
-  color: ${({ theme }) => theme.colors.orange};
+  color: ${({ theme }) => theme.colors.red};
   position: absolute;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.lightOrange};
@@ -12,7 +12,7 @@ const FooterLayout = styled.div`
   margin-top: 50px;
   .footer-icons {
     display: flex;
-    margin: 30px;
+    margin: 15px 30px 50px 30px;
     .footer-icon-wrapper {
       margin: 10px;
       cursor: pointer;
@@ -23,6 +23,10 @@ const FooterLayout = styled.div`
         color: ${({ theme }) => theme.colors.darkRed};
       }
     }
+  }
+  .credit {
+    position: absolute;
+    top: 60%;
   }
 `;
 
