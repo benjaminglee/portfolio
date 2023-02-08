@@ -1,7 +1,7 @@
 import RightNav from './RightNav';
 import Burger from './Burger';
 import NavbarLayout from './Navbar.layout';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const Navbar = () => (
   <NavbarLayout>
@@ -37,6 +37,15 @@ const Navbar = () => (
             target="_blank"
           >
             <FaLinkedin size="2rem" />
+          </a>
+        </div>
+        <div className="linkwrapper">
+          <a
+            rel="noreferrer"
+            href="mailto: benjaminlee0727@gmail.com"
+            target="_blank"
+          >
+            <FaEnvelope size="2rem" />
           </a>
         </div>
         <div className="linkwrapper">

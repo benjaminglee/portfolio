@@ -1,18 +1,26 @@
-import { NavLink } from 'react-router-dom';
 import RightNavLayout from './RightNav.layout';
 
 const RightNav = ({ open }) => {
   return (
     <RightNavLayout open={open}>
       <nav className="navbar-right">
-        <div className="linkwrapper">
-          <NavLink to="/about">About</NavLink>
+        <div className="rightNavLink">
+          <a href="#about">About</a>
         </div>
-        <div className="linkwrapper">
-          <NavLink to="/projects">Projects</NavLink>
+        <div className="rightNavLink">
+          <a href="#project">Projects</a>
         </div>
-        <div className="linkwrapper">
-          <NavLink to="/contact">Contact</NavLink>
+        <div className="rightNavLink">
+          <a href="#contact">Contact</a>
+        </div>
+        <div className="rightNavLink">
+          <a href="#contact">LinkedIn</a>
+        </div>
+        <div className="rightNavLink">
+          <a href="#contact">Github</a>
+        </div>
+        <div className="rightNavLink">
+          <a href="#contact">Resume</a>
         </div>
       </nav>
     </RightNavLayout>

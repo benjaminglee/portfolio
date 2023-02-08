@@ -64,7 +64,6 @@ const MainLayout = styled.div`
     color: ${({ theme }) => theme.colors.lightOrange};
     font-weight: 500;
     font-size: 1.75rem;
-    margin-top: 100px;
   }
   .about {
     color: ${({ theme }) => theme.colors.orange};
@@ -138,48 +137,59 @@ const MainLayout = styled.div`
       color: ${({ theme }) => theme.colors.pale};
     }
   }
-  .project {
+  .projects {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     font-weight: 400;
-    &-info {
-      background-color: ${({ theme }) => theme.colors.darkRed};
-      max-width: 600px;
-      padding: 10px;
-      border-radius: 5px;
-      width: 75%;
-      color: ${({ theme }) => theme.colors.pale};
-      font-size: 1rem;
-      .button-container {
-        display: flex;
-        justify-content: center;
-        button {
-          background-color: ${({ theme }) => theme.colors.red};
-          width: 70px;
-          height: 30px;
-          border: none;
-          margin: 0 10px 0 0;
-          cursor: pointer;
-          border-radius: 3px;
-          font-weight: 600;
-          color: ${({ theme }) => theme.colors.darkRed};
-          &:hover {
-            color: ${({ theme }) => theme.colors.pale};
+    .singleProject {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 150px;
+      .projectTitle {
+      }
+      .project-info {
+        background-color: ${({ theme }) => theme.colors.darkRed};
+        max-width: 600px;
+        padding: 10px;
+        border-radius: 5px;
+        width: 75%;
+        color: ${({ theme }) => theme.colors.pale};
+        font-size: 1rem;
+        .button-container {
+          display: flex;
+          justify-content: center;
+          button {
+            background-color: ${({ theme }) => theme.colors.red};
+            width: 70px;
+            height: 30px;
+            border: none;
+            margin: 0 10px 0 0;
+            cursor: pointer;
+            border-radius: 3px;
+            font-weight: 600;
+            color: ${({ theme }) => theme.colors.darkRed};
+            &:hover {
+              color: ${({ theme }) => theme.colors.pale};
+            }
           }
         }
       }
-    }
-    .skills {
-      color: ${({ theme }) => theme.colors.lightOrange};
-      span {
-        color: ${({ theme }) => theme.colors.orange};
+      .skills {
+        color: ${({ theme }) => theme.colors.lightOrange};
+        span {
+          color: ${({ theme }) => theme.colors.orange};
+        }
       }
     }
   }
   .contact {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    #contactHeader {
+      align-self: center;
+    }
   }
   .contact-main {
     height: 100%;
@@ -190,16 +200,29 @@ const MainLayout = styled.div`
   .contact-text {
     width: 40%;
     color: ${({ theme }) => theme.colors.orange};
+    font-size: 16px;
   }
   .map-wrapper {
     display: flex;
     justify-content: center;
     width: 50%;
-    height: 50%;
+    height: 40vh;
     iframe {
       width: 100%;
       height: 100%;
       max-width: 1000px;
+    }
+  }
+  @media (max-width: 838px) {
+    .contact-main {
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-text {
+      width: 90%;
+    }
+    .map-wrapper {
+      width: 90%;
     }
   }
 `;

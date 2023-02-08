@@ -4,7 +4,7 @@ const BurgerLayout = styled.div`
   width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 15px;
+  top: 22px;
   right: 20px;
   display: none;
   z-index: 2;
@@ -12,7 +12,7 @@ const BurgerLayout = styled.div`
     width: 2rem;
     height: 0.25rem;
     background-color: ${({ open, theme }) =>
-      open ? theme.colors.background : theme.colors.darkRed};
+      open ? theme.colors.red : theme.colors.darkRed};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s ease-in-out;
