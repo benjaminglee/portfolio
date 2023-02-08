@@ -4,11 +4,10 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/constants';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 function App() {
   return (
-    <>
+    <div style={{ overflowX: 'hidden' }}>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Navbar />
@@ -17,7 +16,7 @@ function App() {
 
         <Footer />
       </ThemeProvider>
-    </>
+    </div>
   );
 }
 

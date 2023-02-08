@@ -10,6 +10,8 @@ body {
     padding: 0px 0px 0px 0px; 
     font-size: 20px;
     background-color: #2C0A2D;
+    overflow-x: hidden;
+    position:relative;
 }
-html{scroll-behavior:smooth;}
+//html{scroll-behavior:smooth; position:absolute}
 `;

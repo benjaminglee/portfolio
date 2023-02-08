@@ -23,8 +23,6 @@ const Main = () => {
       setOffset(window.pageYOffset);
       console.log(offset);
     };
-
-    // clean up code
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
@@ -32,6 +30,7 @@ const Main = () => {
 
   return (
     <MainLayout theme={theme} id="mainwrapper">
+      <div className="navPad"></div>
       <section className="hero" id="hero">
         <ParticlesBackground />
         <div className="desc-background">
@@ -75,14 +74,33 @@ const Main = () => {
           <div
             className="moon"
             style={{
-              transform: `translateY(-${offset * 0.5}px)`,
+              transform: `translateY(${offset * 0.29}px)`,
+              //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
             }}
           >
             adas
           </div>
         </div>
       </section>
+      <div
+        className="cloud2"
+        style={{
+          transform: `translateY(${offset * -1}px)`,
+          //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
+        }}
+      >
+        <img src="../cloud2.png" />
+      </div>
       <About />
+      <div
+        className="cloud1"
+        style={{
+          transform: `translateY(${offset * -1}px)`,
+          //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
+        }}
+      >
+        <img src="../cloud1.png" />
+      </div>
       <Projects />
       <Contact />
     </MainLayout>

@@ -1,17 +1,68 @@
 import styled from 'styled-components';
 
 const MainLayout = styled.div`
+  overflow-x: hidden;
+  overflow-y: auto;
+  .navPad {
+    width: 100%;
+    height: 60px;
+  }
+  .cloud1 {
+    z-index: -1;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    overflow-x: hidden;
+    width: 100%;
+    img {
+      max-width: 63%;
+      height: 100%;
+    }
+  }
+  .cloud2 {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    right: 20px;
+    overflow-x: hidden;
+    width: 100%;
+    img {
+      max-width: 63%;
+    }
+  }
   .moon {
-    width: 200px;
-    height: 200px;
+    overflow-x: hidden;
+    left: 100px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     position: absolute;
     z-index: -1;
     background-color: white;
   }
-  overflow-x: hidden;
-  overflow-y: auto;
+  @media (max-width: 838px) {
+    .moon {
+      left: 30px;
+      width: 250px;
+      height: 250px;
+    }
+    .cloud1 {
+      height: 200px;
+    }
+    .cloud2 {
+      height: 200px;
+    }
+  }
+  .tree {
+    position: absolute;
+    background-color: white;
+    height: 3000px;
+    bottom: 0;
+    width: 50px;
+    left: 100px;
+  }
   section {
+    overflow-x: hidden;
     scroll-snap-align: start;
   }
   .desc-background {
