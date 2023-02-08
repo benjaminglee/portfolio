@@ -6,8 +6,19 @@ const Projects = () => {
   return (
     <ProjectsLayout>
       <div className="projects" id="project">
-        <h2 className="projectHeader">Projects</h2>
-        <div className="singleProject">
+        <h2
+          className="projectHeader"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          Projects
+        </h2>
+        <div
+          className="singleProject"
+          data-aos="fade-left"
+          easing="ease-out"
+          data-aos-duration="800"
+        >
           <Slider slides={slides[0]} />
           <div className="project-info">
             <h3 className="projectTitle">BluePrint</h3>
@@ -39,7 +50,12 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="singleProject">
+        <div
+          className="singleProject"
+          easing="ease-out"
+          data-aos-duration="800"
+          data-aos="fade-right"
+        >
           <Slider slides={slides[1]} />
           <div className="project-info">
             <h3 className="projectTitle">Tickit</h3>
@@ -70,7 +86,13 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="singleProject" id="picky">
+        <div
+          className="singleProject"
+          id="picky"
+          easing="ease-out"
+          data-aos-duration="800"
+          data-aos="fade-left"
+        >
           <Slider slides={slides[2]} />
           <div className="project-info">
             <h3 className="projectTitle">Picky!</h3>

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const MainLayout = styled.div`
+  overflow-x: hidden;
   section {
     scroll-snap-align: start;
   }

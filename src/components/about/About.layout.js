@@ -73,6 +73,9 @@ const AboutLayout = styled.section`
     span {
       color: ${({ theme }) => theme.colors.pale};
     }
+    @media (max-width: 838px) {
+      font-size: 18px;
+    }
   }
 `;
 

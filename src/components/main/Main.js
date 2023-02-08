@@ -10,7 +10,7 @@ import Projects from '../projects/Projects';
 
 const Main = () => {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init();
   }, []);
   return (
     <MainLayout theme={theme}>

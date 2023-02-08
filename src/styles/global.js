@@ -11,5 +11,5 @@ body {
     font-size: 20px;
     background-color: #2C0A2D;
 }
-html{scroll-behavior:smooth; scroll-snap-type: y proximity; scroll-padding:67px;}
+html{scroll-behavior:smooth;}
 `;
