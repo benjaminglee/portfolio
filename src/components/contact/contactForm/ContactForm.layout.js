@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ContactLayout = styled.div`
+const ContactFormLayout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,4 +42,4 @@ const ContactLayout = styled.div`
   }
 `;
 
-export default ContactLayout;
+export default ContactFormLayout;

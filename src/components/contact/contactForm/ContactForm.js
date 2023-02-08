@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import ContactLayout from './Contact.layout';
+import ContactFormLayout from './ContactForm.layout';
 
-export const ContactUs = () => {
+export const ContactForm = () => {
   const form = useRef();
 
   function ValidateEmail(input) {
@@ -42,7 +42,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <ContactLayout>
+    <ContactFormLayout>
       <form ref={form} onSubmit={sendEmail}>
         <input type="text" name="from_name" placeholder="Your Name" />
         <input
@@ -54,6 +54,6 @@ export const ContactUs = () => {
         <textarea name="message" placeholder="Write message..." />
         <input id="emailsub" type="submit" value="Send" />
       </form>
-    </ContactLayout>
+    </ContactFormLayout>
   );
 };

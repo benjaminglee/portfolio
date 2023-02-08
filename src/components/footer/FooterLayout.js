@@ -27,6 +27,7 @@ const FooterLayout = styled.div`
   .credit {
     position: absolute;
     top: 60%;
+    font-size: 18px;
   }
 `;
 

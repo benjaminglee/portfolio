@@ -1,17 +1,18 @@
-import { Routes, Route } from 'react-router-dom';
 import Main from './components/main/Main';
 import { GlobalStyles } from './styles/global';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/constants';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Routes>
-          <Route path="/" element={<Main />} />
-        </Routes>
+        <Navbar />
+        <Main />
+        <Footer />
       </ThemeProvider>
     </>
   );

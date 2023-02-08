@@ -5,15 +5,16 @@ const MainLayout = styled.div`
     scroll-snap-align: start;
   }
   .desc-background {
-    // background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
   }
   .name {
+    position: initial;
     font-size: 1.5rem;
     padding: 1rem;
     margin: 1rem;
     pointer-events: none;
     color: ${({ theme }) => theme.colors.orange};
+
     a {
       pointer-events: auto;
       text-decoration: none;
@@ -73,6 +74,7 @@ const MainLayout = styled.div`
     align-items: center;
     line-height: 1.5;
     padding: 15px;
+    margin-bottom: 100px;
     .about-main {
       display: flex;
       flex-direction: column;
@@ -135,96 +137,6 @@ const MainLayout = styled.div`
     }
     span {
       color: ${({ theme }) => theme.colors.pale};
-    }
-  }
-  .projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 400;
-    .singleProject {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 150px;
-      .projectTitle {
-        margin: 0;
-      }
-      .project-info {
-        margin-top: 5px;
-        background-color: ${({ theme }) => theme.colors.darkRed};
-        max-width: 800px;
-        padding: 20px;
-        border-radius: 5px;
-        width: 75%;
-        color: ${({ theme }) => theme.colors.pale};
-        font-size: 1rem;
-        .button-container {
-          display: flex;
-          justify-content: center;
-          button {
-            background-color: ${({ theme }) => theme.colors.red};
-            width: 70px;
-            height: 30px;
-            border: none;
-            margin: 0 10px 0 0;
-            cursor: pointer;
-            border-radius: 3px;
-            font-weight: 600;
-            color: ${({ theme }) => theme.colors.darkRed};
-            &:hover {
-              color: ${({ theme }) => theme.colors.pale};
-            }
-          }
-        }
-      }
-      .skills {
-        color: ${({ theme }) => theme.colors.lightOrange};
-        span {
-          color: ${({ theme }) => theme.colors.orange};
-        }
-      }
-    }
-  }
-  .contact {
-    display: flex;
-    flex-direction: column;
-    #contactHeader {
-      align-self: center;
-    }
-  }
-  .contact-main {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-  .contact-text {
-    width: 40%;
-    color: ${({ theme }) => theme.colors.orange};
-    font-size: 16px;
-  }
-  .map-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    height: 40vh;
-    iframe {
-      width: 100%;
-      height: 100%;
-      max-width: 1000px;
-    }
-  }
-  @media (max-width: 838px) {
-    .contact-main {
-      flex-direction: column;
-      align-items: center;
-    }
-    .contact-text {
-      width: 90%;
-    }
-    .map-wrapper {
-      width: 90%;
     }
   }
 `;

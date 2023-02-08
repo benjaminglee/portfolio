@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 
 const NavbarLayout = styled.div`
+  @keyframes fade-down {
+    0% {
+      opacity: 0.2;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
   position: fixed;
   z-index: 2;
   .logo {
@@ -32,6 +43,7 @@ const NavbarLayout = styled.div`
     }
   }
   .navbar-main {
+    animation: fade-down 1s ease-out;
     padding-top: 12px;
     position: fixed;
     width: 100%;
@@ -65,7 +77,7 @@ const NavbarLayout = styled.div`
     }
   }
   .linkwrapper {
-    margin-left: 40px;
+    margin-left: 30px;
     a {
       padding: 10px;
       text-decoration: none;

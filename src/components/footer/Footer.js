@@ -41,7 +41,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="credit">Built by Ben Lee 2023</div>
+      <div className="credit">© Ben Lee 2023</div>
     </FooterLayout>
   );
 };
