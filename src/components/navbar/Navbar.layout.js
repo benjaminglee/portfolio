@@ -13,7 +13,7 @@ const NavbarLayout = styled.div`
   }
 
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   .logo {
     left: -10px;
     top: 20px;

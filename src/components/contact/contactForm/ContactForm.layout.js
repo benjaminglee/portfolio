@@ -6,7 +6,7 @@ const ContactFormLayout = styled.div`
   align-items: center;
   background-color: #363953;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   padding: 15px;
   border-radius: 5px;
   #contact-heading {

@@ -30,6 +30,7 @@ const ContactLayout = styled.section`
       width: 100%;
       height: 100%;
       max-width: 1000px;
+      z-index: 3;
     }
   }
   @media (max-width: 838px) {

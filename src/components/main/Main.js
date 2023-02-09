@@ -1,6 +1,7 @@
 import MainLayout from './Main.layout';
 import { theme } from '../../styles/constants';
 import ParticlesBackground from '../particles/ParticlesBackground';
+import ParticlesBackgroundDay from '../particles/ParticlesDay';
 import About from '../about/About';
 import Contact from '../contact/Contact';
 import Aos from 'aos';
@@ -32,7 +33,7 @@ const Main = ({ mode }) => {
     <MainLayout mode={mode} theme={theme} id="mainwrapper">
       <div className="navPad"></div>
       <section className="hero" id="hero">
-        {mode ? <ParticlesBackground /> : null}
+        {mode ? <ParticlesBackground /> : <ParticlesBackgroundDay />}
         <div className="desc-background">
           <div className="name">
             Hi there! I'm{' '}
@@ -123,6 +124,20 @@ const Main = ({ mode }) => {
       </div>
       <Contact mode={mode} />
       <div className="navPad"></div>
+
+      <div className="ground">
+        <div className="campfire">
+          <img
+            src={mode ? '../campfireNight.png' : 'campfireDay.png'}
+            className={mode ? 'fire' : null}
+          />
+        </div>
+        <div className="ground-layer1"></div>
+        <div className="ground-layer2"></div>
+        <div className="ground-layer3"></div>
+        {mode ? null : <img className="bones" src="../bones.png" />}
+        {mode ? null : <img className="rocks" src="../rocks.png" />}
+      </div>
     </MainLayout>
   );
 };
