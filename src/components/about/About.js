@@ -4,12 +4,12 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import ParticlesBackground from '../particles/ParticlesBackground';
 
-const About = () => {
+const About = ({ mode }) => {
   return (
-    <AboutLayout>
+    <AboutLayout mode={mode}>
       <a class="anchor" id="aboutMe"></a>
       <div className="about" id="about">
-        <h2 data-aos="fade-up" data-aos-duration="800">
+        <h2 className="aboutHeader" data-aos="fade-up" data-aos-duration="800">
           A Little About Me...
         </h2>
         <div className="about-main">

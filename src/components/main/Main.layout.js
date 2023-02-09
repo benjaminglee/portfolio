@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const MainLayout = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
+  z-index: -2;
   .navPad {
     width: 100%;
     height: 60px;
@@ -91,20 +92,21 @@ const MainLayout = styled.div`
     padding: 1rem;
     margin: 1rem;
     pointer-events: none;
-    color: ${({ theme }) => theme.colors.orange};
+    color: ${({ mode, theme }) =>
+      mode ? theme.colors.orange : theme.colors.pale};
 
     a {
       pointer-events: auto;
       text-decoration: none;
-      color: ${({ theme }) => theme.colors.pale};
+      color: ${({ mode, theme }) => (mode ? theme.colors.pale : '#ffe33b')};
       text-decoration: underline;
-      text-decoration-color: ${({ theme }) => theme.colors.lightOrange};
+      text-decoration-color: ${({ mode, theme }) =>
+        mode ? theme.colors.lightOrange : '#ffb749'};
     }
     a:hover {
-      color: ${({ theme }) => theme.colors.red};
+      color: ${({ theme, mode }) => (mode ? theme.colors.red : '#8ce172')};
     }
     span {
-      color: ${({ theme }) => theme.colors.orange};
       font-size: 3rem;
     }
   }
@@ -113,18 +115,19 @@ const MainLayout = styled.div`
     padding: 1rem;
     margin: 1rem;
     pointer-events: none;
-    color: ${({ theme }) => theme.colors.orange};
+    color: ${({ theme, mode }) =>
+      mode ? theme.colors.orange : theme.colors.pale};
     span {
-      color: ${({ theme }) => theme.colors.pale};
       font-size: 2.8rem;
     }
     a {
       pointer-events: auto;
       text-decoration: none;
-      color: ${({ theme }) => theme.colors.pale};
+      color: ${({ mode, theme }) => (mode ? theme.colors.pale : '#ffe33b')};
     }
     a:hover {
-      color: ${({ theme }) => theme.colors.red};
+      color: ${({ theme, mode }) =>
+        mode ? theme.colors.lightOrange : '#8ce172'};
     }
   }
   .hero {
@@ -133,16 +136,6 @@ const MainLayout = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  h2 {
-    color: ${({ theme }) => theme.colors.pale};
-    font-weight: 500;
-    font-size: 2.5rem;
-  }
-  h3 {
-    color: ${({ theme }) => theme.colors.lightOrange};
-    font-weight: 500;
-    font-size: 1.75rem;
   }
 `;
 

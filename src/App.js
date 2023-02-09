@@ -4,17 +4,22 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/constants';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import { useState } from 'react';
 
 function App() {
+  const [mode, setMode] = useState(true);
   return (
     <div style={{ overflowX: 'hidden' }}>
       <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Navbar />
+        <GlobalStyles mode={mode} />
+        <Navbar mode={mode} />
+        <button className="switch" onClick={() => setMode(!mode)}>
+          switch
+        </button>
 
-        <Main />
+        <Main mode={mode} />
 
-        <Footer />
+        <Footer mode={mode} />
       </ThemeProvider>
     </div>
   );

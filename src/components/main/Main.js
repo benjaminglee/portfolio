@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import Projects from '../projects/Projects';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
-const Main = () => {
+const Main = ({ mode }) => {
   useEffect(() => {
     Aos.init();
   }, []);
@@ -29,10 +29,10 @@ const Main = () => {
   }, []);
 
   return (
-    <MainLayout theme={theme} id="mainwrapper">
+    <MainLayout mode={mode} theme={theme} id="mainwrapper">
       <div className="navPad"></div>
       <section className="hero" id="hero">
-        <ParticlesBackground />
+        {mode ? <ParticlesBackground /> : null}
         <div className="desc-background">
           <div className="name">
             Hi there! I'm{' '}
@@ -78,41 +78,51 @@ const Main = () => {
               //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
             }}
           >
-            <img src="../moon.png" />
+            <img src={mode ? '../moon.png' : '../sun.png'} alt="moon/sun" />
           </div>
         </div>
       </section>
       <div
         className="cloud2"
         style={{
-          transform: `translateY(${offset * -1}px)`,
+          transform: `translateY(${offset * -0.9}px)`,
           //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
         }}
       >
-        <img src="../cloud2.png" />
+        <img
+          src={mode ? '../cloud2.png' : '../dayCloud2.png'}
+          alt="passing cloud"
+        />
       </div>
-      <About />
+      <About mode={mode} />
       <div
         className="cloud1"
         style={{
-          transform: `translateY(${offset * -1}px)`,
+          transform: `translateY(${offset * -0.9}px)`,
           //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
         }}
       >
-        <img src="../cloud1.png" />
+        <img
+          src={mode ? '../cloud1.png' : '../dayCloud1.png'}
+          alt="passing cloud"
+        />
       </div>
-      <Projects />
+      <Projects mode={mode} />
       <div
         className="cloud2"
         id="cloud3"
         style={{
-          transform: `translateY(${offset * -1}px)`,
+          transform: `translateY(${offset * -0.9}px)`,
           //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
         }}
       >
-        <img src="../cloud3.png" />
+        <img
+          src={mode ? '../cloud3.png' : '../dayCloud3.png'}
+          alt="passing cloud"
+        />
       </div>
-      <Contact />
+      <Contact mode={mode} />
+      <div className="navPad"></div>
     </MainLayout>
   );
 };

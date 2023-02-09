@@ -7,5 +7,11 @@ export const theme = {
     lightOrange: '#F87D5C',
     pale: '#FDD9CB',
     white: '#FFFFFF',
+
+    yellow: '#ffe33b',
+    green: '#8ce172',
+    blue: '#91bff2',
+    popsicle: '#ff5a5a',
+    warm: '#ffb749',
   },
 };

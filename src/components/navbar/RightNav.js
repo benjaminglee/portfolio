@@ -5,22 +5,39 @@ const RightNav = ({ open, setOpen }) => {
     <RightNavLayout open={open}>
       <nav className="navbar-right">
         <div className="rightNavLink" onClick={() => setOpen(false)}>
-          <a href="#about">./About</a>
+          <a href="#aboutMe">./About</a>
         </div>
         <div className="rightNavLink" onClick={() => setOpen(false)}>
-          <a href="#project">./Projects</a>
+          <a href="#myprojects">./Projects</a>
         </div>
         <div className="rightNavLink" onClick={() => setOpen(false)}>
-          <a href="#contact">./Contact</a>
+          <a href="#contactme">./Contact</a>
         </div>
         <div className="rightNavLink" onClick={() => setOpen(false)}>
-          <a href="#contact">./LinkedIn</a>
+          <a
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/benjamin-g-lee/"
+            target="_blank"
+          >
+            ./LinkedIn
+          </a>
         </div>
         <div className="rightNavLink" onClick={() => setOpen(false)}>
-          <a href="#contact">./Github</a>
+          <a
+            rel="noreferrer"
+            href="https://github.com/benjaminglee"
+            target="_blank"
+          >
+            ./Github
+          </a>
         </div>
         <div className="rightNavLink" onClick={() => setOpen(false)}>
-          <a href="#contact">./Resume</a>
+          <a
+            href="../../Benjamin_Lee_Resume.pdf"
+            download="Benjamin_Lee_Resume"
+          >
+            ./Resume
+          </a>
         </div>
       </nav>
     </RightNavLayout>

@@ -3,6 +3,7 @@ import { ContactForm } from './contactForm/ContactForm';
 const Contact = () => {
   return (
     <ContactLayout>
+      <a class="anchor" id="contactme"></a>
       <div className="contact" id="contact">
         <h2 id="contactHeader">Contact Me!</h2>
         <div className="contact-main">

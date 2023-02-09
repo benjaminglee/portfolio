@@ -9,7 +9,6 @@ const FooterLayout = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
   .footer-icons {
     display: flex;
     margin: 15px 30px 50px 30px;
