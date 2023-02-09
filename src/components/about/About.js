@@ -7,6 +7,7 @@ import ParticlesBackground from '../particles/ParticlesBackground';
 const About = () => {
   return (
     <AboutLayout>
+      <a class="anchor" id="aboutMe"></a>
       <div className="about" id="about">
         <h2 data-aos="fade-up" data-aos-duration="800">
           A Little About Me...

@@ -22,7 +22,6 @@ export const ContactForm = () => {
     e.preventDefault();
     const email = document.getElementById('email').value;
     if (!ValidateEmail(email)) return;
-
     emailjs
       .sendForm(
         `${process.env.REACT_APP_SERVICE_ID}`,

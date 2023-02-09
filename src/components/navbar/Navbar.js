@@ -1,4 +1,3 @@
-import RightNav from './RightNav';
 import Burger from './Burger';
 import NavbarLayout from './Navbar.layout';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
@@ -14,10 +13,10 @@ const Navbar = () => (
       </a>
       <nav className="navbar">
         <div className="linkwrapper">
-          <a href="#about">About</a>
+          <a href="#aboutMe">About</a>
         </div>
         <div className="linkwrapper">
-          <a href="#project">Projects</a>
+          <a href="#myprojects">Projects</a>
         </div>
         <div className="linkwrapper">
           <a href="#contact">Contact</a>

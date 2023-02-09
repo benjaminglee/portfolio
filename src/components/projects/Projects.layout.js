@@ -53,7 +53,7 @@ const ProjectsLayout = styled.section`
       }
     }
     #picky {
-      margin-bottom: 250px;
+      margin-bottom: 200px;
     }
   }
 `;

@@ -3,9 +3,12 @@ import styled from 'styled-components';
 const RightNavLayout = styled.div`
   .navbar-right {
     display: none;
-
+    .rightNavLink {
+      margin-top: 30px;
+    }
     a {
       text-decoration: none;
+      color: white;
     }
 
     @media (max-width: 838px) {

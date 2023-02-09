@@ -78,7 +78,7 @@ const Main = () => {
               //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
             }}
           >
-            adas
+            <img src="../moon.png" />
           </div>
         </div>
       </section>
@@ -102,6 +102,16 @@ const Main = () => {
         <img src="../cloud1.png" />
       </div>
       <Projects />
+      <div
+        className="cloud2"
+        id="cloud3"
+        style={{
+          transform: `translateY(${offset * -1}px)`,
+          //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
+        }}
+      >
+        <img src="../cloud3.png" />
+      </div>
       <Contact />
     </MainLayout>
   );

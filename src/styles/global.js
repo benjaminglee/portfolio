@@ -3,7 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
 body {
     font-family: 'Montserrat', sans-serif;
-    //color:#C3073F;
     color:black;
     font-weight: 500;
     margin: 0px 0px 0px 0px; 
@@ -13,5 +12,10 @@ body {
     overflow-x: hidden;
     position:relative;
 }
-//html{scroll-behavior:smooth; position:absolute}
+.anchor {
+    display: block;
+    position: relative;
+    top: -10vh;
+    visibility: hidden;
+  }
 `;

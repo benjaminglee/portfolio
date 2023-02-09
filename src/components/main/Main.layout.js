@@ -30,15 +30,32 @@ const MainLayout = styled.div`
       max-width: 63%;
     }
   }
+
+  #cloud3 {
+    z-index: -1;
+  }
   .moon {
-    overflow-x: hidden;
     left: 100px;
     width: 300px;
     height: 300px;
-    border-radius: 50%;
     position: absolute;
     z-index: -1;
-    background-color: white;
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+  .bird {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    right: 20px;
+    overflow-x: hidden;
+    width: 100%;
+    img {
+      max-width: 63%;
+    }
   }
   @media (max-width: 838px) {
     .moon {

@@ -5,6 +5,7 @@ import Slider from '../slider/Slider';
 const Projects = () => {
   return (
     <ProjectsLayout>
+      <a className="anchor" id="myprojects"></a>
       <div className="projects" id="project">
         <h2
           className="projectHeader"

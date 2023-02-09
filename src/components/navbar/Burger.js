@@ -12,7 +12,7 @@ const Burger = () => {
         <div />
         <div />
       </BurgerLayout>
-      <RightNav open={open} />
+      <RightNav open={open} setOpen={setOpen} />
     </>
   );
 };
