@@ -26,11 +26,13 @@ const ContactLayout = styled.section`
     width: 50%;
     height: 40vh;
     margin-bottom: 50px;
+
     iframe {
       width: 100%;
       height: 100%;
       max-width: 1000px;
       z-index: 3;
+      border-radius: 10px;
     }
   }
   @media (max-width: 838px) {

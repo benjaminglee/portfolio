@@ -1,7 +1,7 @@
 export const particlesConfigDay = {
   particles: {
     number: {
-      value: 24,
+      value: 18,
       density: {
         enable: true,
         value_area: 600,
@@ -31,19 +31,13 @@ export const particlesConfigDay = {
       anim: {
         enable: false,
         speed: 1,
-        opacity_min: 0.7,
+        opacity_min: 0.5,
         sync: false,
       },
     },
     size: {
-      value: 8,
+      value: 7.5,
       random: true,
-      anim: {
-        enable: true,
-        speed: 150,
-        size_min: 4,
-        sync: false,
-      },
     },
     line_linked: {
       enable: false,
@@ -54,7 +48,7 @@ export const particlesConfigDay = {
     },
     move: {
       enable: true,
-      speed: 5,
+      speed: 2.2,
       direction: 'bottom-left',
       random: false,
       straight: false,

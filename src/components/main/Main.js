@@ -8,23 +8,17 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
 import Projects from '../projects/Projects';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import Landscape from '../landscape/Landscape';
 
 const Main = ({ mode }) => {
   useEffect(() => {
     Aos.init();
   }, []);
   const [offset, setOffset] = useState(0);
-
+  const onScroll = () => {
+    setOffset(window.pageYOffset);
+  };
   useEffect(() => {
-    const elem = document.getElementById('mainwrapper');
-    console.log(elem.style);
-    console.log(elem);
-    const onScroll = () => {
-      setOffset(window.pageYOffset);
-      console.log(offset);
-    };
-    window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -76,10 +70,12 @@ const Main = ({ mode }) => {
             className="moon"
             style={{
               transform: `translateY(${offset * 0.29}px)`,
-              //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
             }}
           >
-            <img src={mode ? '../moon.png' : '../sun.png'} alt="moon/sun" />
+            <img
+              src={mode ? 'images//moon.png' : 'images//sun.png'}
+              alt="moon/sun"
+            />
           </div>
         </div>
       </section>
@@ -87,11 +83,10 @@ const Main = ({ mode }) => {
         className="cloud2"
         style={{
           transform: `translateY(${offset * -0.9}px)`,
-          //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
         }}
       >
         <img
-          src={mode ? '../cloud2.png' : '../dayCloud2.png'}
+          src={mode ? 'images//cloud2.png' : 'images//dayCloud2.png'}
           alt="passing cloud"
         />
       </div>
@@ -100,11 +95,10 @@ const Main = ({ mode }) => {
         className="cloud1"
         style={{
           transform: `translateY(${offset * -0.9}px)`,
-          //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
         }}
       >
         <img
-          src={mode ? '../cloud1.png' : '../dayCloud1.png'}
+          src={mode ? 'images//cloud1.png' : 'images//dayCloud1.png'}
           alt="passing cloud"
         />
       </div>
@@ -114,30 +108,16 @@ const Main = ({ mode }) => {
         id="cloud3"
         style={{
           transform: `translateY(${offset * -0.9}px)`,
-          //transform: `translate(${offset * 1}px,${offset * -0.4}px)`,
         }}
       >
         <img
-          src={mode ? '../cloud3.png' : '../dayCloud3.png'}
+          src={mode ? 'images//cloud3.png' : 'images//dayCloud3.png'}
           alt="passing cloud"
         />
       </div>
       <Contact mode={mode} />
       <div className="navPad"></div>
-
-      <div className="ground">
-        <div className="campfire">
-          <img
-            src={mode ? '../campfireNight.png' : 'campfireDay.png'}
-            className={mode ? 'fire' : null}
-          />
-        </div>
-        <div className="ground-layer1"></div>
-        <div className="ground-layer2"></div>
-        <div className="ground-layer3"></div>
-        {mode ? null : <img className="bones" src="../bones.png" />}
-        {mode ? null : <img className="rocks" src="../rocks.png" />}
-      </div>
+      <Landscape mode={mode} />
     </MainLayout>
   );
 };
