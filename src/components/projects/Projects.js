@@ -2,9 +2,9 @@ import ProjectsLayout from './Projects.layout';
 import slides from '../slider/slides';
 import Slider from '../slider/Slider';
 
-const Projects = () => {
+const Projects = ({ mode }) => {
   return (
-    <ProjectsLayout>
+    <ProjectsLayout mode={mode}>
       <a className="anchor" id="myprojects"></a>
       <div className="projects" id="project">
         <h2
@@ -20,7 +20,7 @@ const Projects = () => {
           easing="ease-out"
           data-aos-duration="800"
         >
-          <Slider slides={slides[0]} />
+          <Slider slides={slides[0]} mode={mode} />
           <div className="project-info">
             <h3 className="projectTitle">BluePrint</h3>
             <p>

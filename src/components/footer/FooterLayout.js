@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 const FooterLayout = styled.div`
-  color: ${({ theme }) => theme.colors.red};
+  color: ${({ theme, mode }) =>
+    mode ? theme.colors.red : theme.colors.lightGreen};
   position: absolute;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.lightOrange};
+  background-color: ${({ theme, mode }) =>
+    mode ? theme.colors.lightOrange : theme.colors.darkGreen};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,10 +18,11 @@ const FooterLayout = styled.div`
       margin: 10px;
       cursor: pointer;
       a {
-        color: ${({ theme }) => theme.colors.red};
+        color: ${({ theme, mode }) =>
+          mode ? theme.colors.red : theme.colors.lightGreen};
       }
       a:hover {
-        color: ${({ theme }) => theme.colors.darkRed};
+        color: ${({ theme, mode }) => (mode ? theme.colors.darkRed : 'white')};
       }
     }
   }

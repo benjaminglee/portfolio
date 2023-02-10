@@ -35,7 +35,7 @@ const AboutLayout = styled.section`
     .answer-right {
       position: relative;
       background-color: ${({ theme, mode }) =>
-        mode ? theme.colors.darkRed : theme.colors.popsicle};
+        mode ? theme.colors.darkRed : theme.colors.blue};
       margin: 10px;
       width: 75%;
       max-width: 800px;
@@ -53,7 +53,7 @@ const AboutLayout = styled.section`
       height: 0;
       border: 20px solid transparent;
       border-left-color: ${({ theme, mode }) =>
-        mode ? theme.colors.darkRed : theme.colors.popsicle};
+        mode ? theme.colors.darkRed : theme.colors.blue};
       border-right: 0;
       border-bottom: 0;
       margin-top: -10px;
@@ -69,7 +69,7 @@ const AboutLayout = styled.section`
       height: 0;
       border: 20px solid transparent;
       border-right-color: ${({ theme, mode }) =>
-        mode ? theme.colors.darkRed : theme.colors.popsicle};
+        mode ? theme.colors.darkRed : theme.colors.blue};
       border-left: 0;
       border-bottom: 0;
       margin-top: -10px;
@@ -83,7 +83,7 @@ const AboutLayout = styled.section`
     }
     span {
       color: ${({ theme, mode }) =>
-        mode ? theme.colors.pale : theme.colors.white};
+        mode ? theme.colors.pale : theme.colors.yellow};
     }
     @media (max-width: 838px) {
       font-size: 18px;

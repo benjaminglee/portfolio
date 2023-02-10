@@ -1,8 +1,4 @@
 import AboutLayout from './About.layout';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
-import ParticlesBackground from '../particles/ParticlesBackground';
 
 const About = ({ mode }) => {
   return (

@@ -8,7 +8,7 @@ const SliderLayout = styled.div`
     position: relative;
   }
   img {
-    border: 4px solid #c29895;
+    border: 4px solid ${({ mode }) => (mode ? '#c29895' : 'white')};
     border-radius: 10px;
     max-width: 700px;
     width: 100%;

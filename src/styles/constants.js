@@ -10,7 +10,9 @@ export const theme = {
 
     yellow: '#ffe33b',
     green: '#8ce172',
-    blue: '#91bff2',
+    lightGreen: '#78AC2C',
+    darkGreen: '#567B20',
+    blue: '#678BE5',
     popsicle: '#ff5a5a',
     warm: '#ffb749',
   },

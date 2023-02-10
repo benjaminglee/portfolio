@@ -19,18 +19,20 @@ const ProjectsLayout = styled.section`
       }
       .project-info {
         margin-top: 5px;
-        background-color: ${({ theme }) => theme.colors.darkRed};
+        background-color: ${({ theme, mode }) =>
+          mode ? theme.colors.darkRed : theme.colors.blue};
         max-width: 800px;
         padding: 20px;
         border-radius: 5px;
         width: 75%;
-        color: ${({ theme }) => theme.colors.pale};
+        color: ${({ theme, mode }) => (mode ? theme.colors.pale : 'white')};
         font-size: 1rem;
         .button-container {
           display: flex;
           justify-content: center;
           button {
-            background-color: ${({ theme }) => theme.colors.red};
+            background-color: ${({ theme, mode }) =>
+              mode ? theme.colors.red : theme.colors.yellow};
             width: 70px;
             height: 30px;
             border: none;
@@ -38,7 +40,8 @@ const ProjectsLayout = styled.section`
             cursor: pointer;
             border-radius: 3px;
             font-weight: 600;
-            color: ${({ theme }) => theme.colors.darkRed};
+            color: ${({ theme, mode }) =>
+              mode ? theme.colors.darkRed : theme.colors.popsicle};
             &:hover {
               color: ${({ theme }) => theme.colors.pale};
             }
@@ -46,9 +49,11 @@ const ProjectsLayout = styled.section`
         }
       }
       .skills {
-        color: ${({ theme }) => theme.colors.lightOrange};
+        color: ${({ theme, mode }) =>
+          mode ? theme.colors.lightOrange : 'white'};
         span {
-          color: ${({ theme }) => theme.colors.orange};
+          color: ${({ theme, mode }) =>
+            mode ? theme.colors.orang : theme.colors.foreground};
         }
       }
     }

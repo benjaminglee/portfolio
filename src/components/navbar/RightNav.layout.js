@@ -4,11 +4,12 @@ const RightNavLayout = styled.div`
   .navbar-right {
     display: none;
     .rightNavLink {
-      margin-top: 30px;
+      margin-top: 50px;
+      font-weight: 500;
     }
     a {
       text-decoration: none;
-      color: white;
+      color: ${({ mode, theme }) => (mode ? 'white' : theme.colors.darkGreen)};
     }
 
     @media (max-width: 838px) {
@@ -22,7 +23,8 @@ const RightNavLayout = styled.div`
       right: 0;
       height: 100vh;
       width: 300px;
-      background-color: ${({ theme }) => theme.colors.orange};
+      background-color: ${({ theme, mode }) =>
+        mode ? theme.colors.orange : theme.colors.lightGreen};
       transition: transform 0.3s ease-in-out;
     }
   }

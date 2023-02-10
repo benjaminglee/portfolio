@@ -4,7 +4,7 @@ import { FaAngleLeft } from 'react-icons/fa';
 import { FaAngleRight } from 'react-icons/fa';
 import Circle from './Circle';
 
-const Slider = ({ slides }) => {
+const Slider = ({ slides, mode }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const handlePrev = (e) => {
     e.preventDefault();
@@ -17,9 +17,9 @@ const Slider = ({ slides }) => {
     else setCurrentIdx(0);
   };
   return (
-    <SliderLayout>
+    <SliderLayout mode={mode}>
       <div className="imageContainer">
-        <img src={slides[currentIdx].src} />
+        <img alt="website screenshots" src={slides[currentIdx].src} />
 
         <div onClick={handlePrev} className="sliderButton">
           <FaAngleLeft color="#2C0A2D" />

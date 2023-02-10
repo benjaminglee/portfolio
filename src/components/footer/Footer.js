@@ -1,9 +1,9 @@
 import FooterLayout from './FooterLayout';
 import { FaLinkedin, FaGithub, FaRegListAlt, FaEnvelope } from 'react-icons/fa';
 
-const Footer = () => {
+const Footer = ({ mode }) => {
   return (
-    <FooterLayout>
+    <FooterLayout mode={mode}>
       <div className="footer-icons">
         <div className="footer-icon-wrapper">
           <a

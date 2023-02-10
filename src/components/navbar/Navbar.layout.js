@@ -25,13 +25,13 @@ const NavbarLayout = styled.div`
     line-height: 0.9;
     cursor: pointer;
     .first {
-      color: ${({ theme }) => theme.colors.darkRed};
+      color: ${({ theme, mode }) => theme.colors.darkRed};
       position: absolute;
     }
     .last {
       padding-top: 2px;
       padding-left: 3px;
-      color: ${({ theme }) => theme.colors.red};
+      color: ${({ theme, mode }) => theme.colors.red};
     }
     .dev {
       color: ${({ theme }) => theme.colors.red};
@@ -51,9 +51,11 @@ const NavbarLayout = styled.div`
     justify-content: flex-end;
     align-items: center;
     height: 55px;
-    background-color: ${({ theme }) => theme.colors.lightOrange};
-    border-bottom: 12px solid ${({ theme }) => theme.colors.orange};
-    color: ${({ theme }) => theme.colors.pale};
+    background-color: ${({ theme, mode }) =>
+      mode ? theme.colors.lightOrange : theme.colors.lightGreen};
+    border-bottom: 12px solid
+      ${({ theme, mode }) =>
+        mode ? theme.colors.orange : theme.colors.darkGreen};
     font-weight: 400;
   }
   .navbar {
@@ -69,7 +71,8 @@ const NavbarLayout = styled.div`
       text-decoration: none;
     }
     a:hover {
-      color: ${({ theme }) => theme.colors.white};
+      color: ${({ theme, mode }) =>
+        mode ? theme.colors.white : theme.colors.darkGreen};
     }
 
     @media (max-width: 838px) {
@@ -81,7 +84,7 @@ const NavbarLayout = styled.div`
     a {
       padding: 10px;
       text-decoration: none;
-      color: ${({ theme }) => theme.colors.pale};
+      color: ${({ theme, mode }) => (mode ? theme.colors.pale : 'white')};
     }
   }
 `;

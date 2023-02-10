@@ -20,7 +20,7 @@ export const particlesConfigDay = {
         nb_sides: 5,
       },
       image: {
-        src: '../../flower.png',
+        src: '../../images/flower.png',
         width: 100,
         height: 100,
       },
@@ -32,6 +32,13 @@ export const particlesConfigDay = {
         enable: false,
         speed: 1,
         opacity_min: 0.5,
+        sync: false,
+      },
+    },
+    rotate: {
+      animation: {
+        enable: true,
+        speed: 50,
         sync: false,
       },
     },
@@ -71,7 +78,7 @@ export const particlesConfigDay = {
         enable: false,
         mode: [],
       },
-      resize: false,
+      resize: true,
     },
     modes: {
       grab: {

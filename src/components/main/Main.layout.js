@@ -21,6 +21,7 @@ const MainLayout = styled.div`
     }
   }
   .cloud2 {
+    z-index: -1;
     display: flex;
     justify-content: flex-start;
     position: absolute;
@@ -93,7 +94,7 @@ const MainLayout = styled.div`
     margin: 1rem;
     pointer-events: none;
     color: ${({ mode, theme }) =>
-      mode ? theme.colors.orange : theme.colors.pale};
+      mode ? theme.colors.orange : theme.colors.white};
 
     a {
       pointer-events: auto;
@@ -116,7 +117,7 @@ const MainLayout = styled.div`
     margin: 1rem;
     pointer-events: none;
     color: ${({ theme, mode }) =>
-      mode ? theme.colors.orange : theme.colors.pale};
+      mode ? theme.colors.orange : theme.colors.white};
     span {
       font-size: 2.8rem;
     }

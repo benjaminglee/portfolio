@@ -2,8 +2,8 @@ import Burger from './Burger';
 import NavbarLayout from './Navbar.layout';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
-const Navbar = () => (
-  <NavbarLayout>
+const Navbar = ({ mode }) => (
+  <NavbarLayout mode={mode}>
     <div className="navbar-main">
       <a href="#hero">
         <div className="logo">
@@ -19,7 +19,7 @@ const Navbar = () => (
           <a href="#myprojects">Projects</a>
         </div>
         <div className="linkwrapper">
-          <a href="#contact">Contact</a>
+          <a href="#contactme">Contact</a>
         </div>
         <div className="linkwrapper">
           <a
@@ -57,7 +57,7 @@ const Navbar = () => (
           </a>
         </div>
       </nav>
-      <Burger />
+      <Burger mode={mode} />
     </div>
   </NavbarLayout>
 );

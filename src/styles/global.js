@@ -34,8 +34,7 @@ body {
     font-size: 2.5rem;
   }
   h3 {
-    color: ${({ theme, mode }) =>
-      mode ? theme.colors.lightOrange : '#8ce172'};
+    color: ${({ theme, mode }) => (mode ? theme.colors.lightOrange : 'white')};
     font-weight: 500;
     font-size: 1.75rem;
   }

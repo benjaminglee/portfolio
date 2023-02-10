@@ -2,16 +2,35 @@ import { useState } from 'react';
 import BurgerLayout from './Burger.layout';
 import RightNav from './RightNav';
 
-const Burger = () => {
+const Burger = ({ mode }) => {
   const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(!open);
+    const body = document.querySelector('body');
+    body.style.overflow = 'hidden';
+  };
+  const handleClose = (open) => {
+    setOpen(!open);
+    const body = document.querySelector('body');
+    body.style.overflow = 'auto';
+  };
   return (
     <>
-      <BurgerLayout open={open} onClick={() => setOpen(!open)}>
+      <BurgerLayout
+        mode={mode}
+        open={open}
+        onClick={open ? handleClose : handleOpen}
+      >
         <div />
         <div />
         <div />
       </BurgerLayout>
-      <RightNav open={open} setOpen={setOpen} />
+      <RightNav
+        mode={mode}
+        open={open}
+        handleClose={handleClose}
+        setOpen={setOpen}
+      />
     </>
   );
 };

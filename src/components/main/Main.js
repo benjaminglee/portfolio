@@ -6,23 +6,16 @@ import About from '../about/About';
 import Contact from '../contact/Contact';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Projects from '../projects/Projects';
 import Landscape from '../landscape/Landscape';
+import ParallaxDiv from '../parallax/ParallaxDiv';
 
 const Main = ({ mode }) => {
   useEffect(() => {
     Aos.init();
   }, []);
-  const [offset, setOffset] = useState(0);
-  const onScroll = () => {
-    setOffset(window.pageYOffset);
-  };
-  useEffect(() => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
+  console.log('rerendering');
   return (
     <MainLayout mode={mode} theme={theme} id="mainwrapper">
       <div className="navPad"></div>
@@ -66,55 +59,34 @@ const Main = ({ mode }) => {
             </span>
             .
           </div>
-          <div
-            className="moon"
-            style={{
-              transform: `translateY(${offset * 0.29}px)`,
-            }}
-          >
+          <ParallaxDiv className="moon" speed={-0.29}>
             <img
               src={mode ? 'images//moon.png' : 'images//sun.png'}
               alt="moon/sun"
             />
-          </div>
+          </ParallaxDiv>
         </div>
       </section>
-      <div
-        className="cloud2"
-        style={{
-          transform: `translateY(${offset * -0.9}px)`,
-        }}
-      >
+      <ParallaxDiv className="cloud2" speed={0.9}>
         <img
           src={mode ? 'images//cloud2.png' : 'images//dayCloud2.png'}
           alt="passing cloud"
         />
-      </div>
+      </ParallaxDiv>
       <About mode={mode} />
-      <div
-        className="cloud1"
-        style={{
-          transform: `translateY(${offset * -0.9}px)`,
-        }}
-      >
+      <ParallaxDiv className="cloud1" speed={0.9}>
         <img
           src={mode ? 'images//cloud1.png' : 'images//dayCloud1.png'}
           alt="passing cloud"
         />
-      </div>
+      </ParallaxDiv>
       <Projects mode={mode} />
-      <div
-        className="cloud2"
-        id="cloud3"
-        style={{
-          transform: `translateY(${offset * -0.9}px)`,
-        }}
-      >
+      <ParallaxDiv className="cloud2" id="cloud3" speed={0.9}>
         <img
           src={mode ? 'images//cloud3.png' : 'images//dayCloud3.png'}
           alt="passing cloud"
         />
-      </div>
+      </ParallaxDiv>
       <Contact mode={mode} />
       <div className="navPad"></div>
       <Landscape mode={mode} />
