@@ -31,7 +31,7 @@ body {
   h2 {
     color: ${({ mode, theme }) => (mode ? theme.colors.pale : '#ffe33b')};
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   h3 {
     color: ${({ theme, mode }) => (mode ? theme.colors.lightOrange : 'white')};

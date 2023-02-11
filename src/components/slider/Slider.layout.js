@@ -8,7 +8,7 @@ const SliderLayout = styled.div`
     position: relative;
   }
   img {
-    border: 4px solid ${({ mode }) => (mode ? '#c29895' : 'white')};
+    border: 3px solid ${({ mode }) => (mode ? '#c29895' : 'white')};
     border-radius: 10px;
     max-width: 700px;
     width: 100%;
@@ -55,7 +55,7 @@ const SliderLayout = styled.div`
     .circle {
       width: 12px;
       height: 12px;
-      background-color: ${(p) => p.theme.colors.pale};
+      background-color: ${(p) => (p.mode ? p.theme.colors.pale : 'white')};
       margin: 10px;
       border-radius: 50%;
       cursor: pointer;
@@ -64,11 +64,13 @@ const SliderLayout = styled.div`
     .circle-active {
       width: 12px;
       height: 12px;
-      background-color: ${(p) => p.theme.colors.lightOrange};
+      background-color: ${(p) =>
+        p.mode ? p.theme.colors.lightOrange : p.theme.colors.yellow};
       margin: 10px;
       border-radius: 50%;
       cursor: pointer;
-      border: 1px solid ${(p) => p.theme.colors.lightOrange};
+      border: 1px solid
+        ${(p) => (p.mode ? p.theme.colors.lightOrange : 'white')};
       transition: background-color 0.6s ease;
     }
   }

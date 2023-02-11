@@ -10,12 +10,11 @@ const useScrollHandler = (handler) => {
 };
 
 const ParallaxDiv = (props) => {
-  console.log(props);
   const ref = useRef();
   const handler = () => {
-    ref.current.style.transform = `translateY(${
-      window.scrollY * props.speed * -1
-    }px)`;
+    ref.current.style.transform = `translate(${
+      window.scrollY * props.speedX * -1
+    }px, ${window.scrollY * props.speedY * -1}px)`;
   };
   useScrollHandler(handler);
   return <div ref={ref} {...props} />;

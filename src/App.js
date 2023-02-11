@@ -12,11 +12,7 @@ function App() {
     <div style={{ overflowX: 'hidden' }}>
       <ThemeProvider theme={theme}>
         <GlobalStyles mode={mode} />
-        <Navbar mode={mode} />
-        <button className="switch" onClick={() => setMode(!mode)}>
-          switch
-        </button>
-
+        <Navbar mode={mode} setMode={setMode} />
         <Main mode={mode} />
 
         <Footer mode={mode} />

@@ -10,7 +10,7 @@ const AboutLayout = styled.section`
     align-items: center;
     line-height: 1.5;
     padding: 15px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     .aboutHeader {
       color: ${({ theme, mode }) =>
         mode ? theme.colors.orange : theme.colors.yellow};
@@ -24,7 +24,7 @@ const AboutLayout = styled.section`
     .answer {
       position: relative;
       background-color: ${({ theme, mode }) =>
-        mode ? theme.colors.darkRed : theme.colors.blue};
+        mode ? 'rgba(76,0,43,.7)' : 'rgba(103,139,229,.7)'};
       margin: 10px;
       width: 75%;
       max-width: 800px;
@@ -35,7 +35,7 @@ const AboutLayout = styled.section`
     .answer-right {
       position: relative;
       background-color: ${({ theme, mode }) =>
-        mode ? theme.colors.darkRed : theme.colors.blue};
+        mode ? 'rgba(76,0,43,.7)' : 'rgba(103,139,229,.7)'};
       margin: 10px;
       width: 75%;
       max-width: 800px;
@@ -53,7 +53,7 @@ const AboutLayout = styled.section`
       height: 0;
       border: 20px solid transparent;
       border-left-color: ${({ theme, mode }) =>
-        mode ? theme.colors.darkRed : theme.colors.blue};
+        mode ? 'rgba(76,0,43,.7)' : 'rgba(103,139,229,.7)'};
       border-right: 0;
       border-bottom: 0;
       margin-top: -10px;
@@ -69,7 +69,7 @@ const AboutLayout = styled.section`
       height: 0;
       border: 20px solid transparent;
       border-right-color: ${({ theme, mode }) =>
-        mode ? theme.colors.darkRed : theme.colors.blue};
+        mode ? 'rgba(76,0,43,.7)' : 'rgba(103,139,229,.7)'};
       border-left: 0;
       border-bottom: 0;
       margin-top: -10px;

@@ -4,7 +4,7 @@ const ContactFormLayout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #363953;
+  background-color: ${({ mode, theme }) => (mode ? '#363953' : '#97C8E7')};
   position: relative;
   z-index: 3;
   padding: 15px;
@@ -27,10 +27,11 @@ const ContactFormLayout = styled.div`
     border: none;
     outline: none;
     padding: 10px;
-    background: #2c2f48;
-    color: #fff;
+
+    background: ${({ mode, theme }) => (mode ? '#2c2f48' : theme.colors.white)};
+    color: ${({ mode }) => (mode ? 'white' : 'gray')};
     width: 100%;
-    border-radius: 0.4rem;
+    border-radius: 0.3rem;
     margin: 8px;
   }
   textarea {
@@ -38,7 +39,9 @@ const ContactFormLayout = styled.div`
   }
   #emailsub {
     width: 100%;
-    background-color: ${({ theme }) => theme.colors.orange};
+    color: white;
+    background-color: ${({ theme, mode }) =>
+      mode ? theme.colors.orange : theme.colors.blue};
   }
 `;
 

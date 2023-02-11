@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import ContactFormLayout from './ContactForm.layout';
 
-export const ContactForm = () => {
+export const ContactForm = ({ mode }) => {
   const form = useRef();
 
   function ValidateEmail(input) {
@@ -41,7 +41,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <ContactFormLayout>
+    <ContactFormLayout mode={mode}>
       <form ref={form} onSubmit={sendEmail}>
         <input type="text" name="from_name" placeholder="Your Name" />
         <input

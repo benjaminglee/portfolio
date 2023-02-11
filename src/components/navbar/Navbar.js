@@ -1,16 +1,19 @@
 import Burger from './Burger';
 import NavbarLayout from './Navbar.layout';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaAngleUp } from 'react-icons/fa';
+import Toggle from '../toggle/Toggle';
 
-const Navbar = ({ mode }) => (
+const Navbar = ({ mode, setMode }) => (
   <NavbarLayout mode={mode}>
     <div className="navbar-main">
-      <a href="#hero">
-        <div className="logo">
-          <div className="first">B</div>
-          <div className="last">B</div>
+      <Toggle mode={mode} setMode={setMode} />
+      <div className="arrow-top" onClick={() => window.scrollTo(0, 0)}>
+        <div className="arrow-inner">
+          <div className="arrow-face">
+            <FaAngleUp size="25px" />
+          </div>
         </div>
-      </a>
+      </div>
       <nav className="navbar">
         <div className="linkwrapper">
           <a href="#aboutMe">About</a>
@@ -39,11 +42,7 @@ const Navbar = ({ mode }) => (
           </a>
         </div>
         <div className="linkwrapper">
-          <a
-            rel="noreferrer"
-            href="mailto: benjaminlee0727@gmail.com"
-            target="_blank"
-          >
+          <a rel="noreferrer" href="mailto: benjaminlee0727@gmail.com">
             <FaEnvelope size="2rem" />
           </a>
         </div>

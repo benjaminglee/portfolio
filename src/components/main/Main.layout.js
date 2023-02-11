@@ -6,7 +6,7 @@ const MainLayout = styled.div`
   z-index: -2;
   .navPad {
     width: 100%;
-    height: 100px;
+    height: 60px;
   }
   .cloud1 {
     z-index: -1;
@@ -20,6 +20,7 @@ const MainLayout = styled.div`
       height: 100%;
     }
   }
+
   .cloud2 {
     z-index: -1;
     display: flex;
@@ -35,6 +36,11 @@ const MainLayout = styled.div`
 
   #cloud3 {
     z-index: -1;
+    bottom: 700px;
+  }
+  #cloud4 {
+    bottom: -800px;
+    opacity: 0.8;
   }
   .moon {
     left: 100px;

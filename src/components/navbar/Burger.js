@@ -6,13 +6,13 @@ const Burger = ({ mode }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(!open);
-    const body = document.querySelector('body');
-    body.style.overflow = 'hidden';
+    // const body = document.querySelector('body');
+    // body.style.overflow = 'hidden';
   };
   const handleClose = (open) => {
     setOpen(!open);
-    const body = document.querySelector('body');
-    body.style.overflow = 'auto';
+    // const body = document.querySelector('body');
+    // body.style.overflow = 'auto';
   };
   return (
     <>

@@ -59,7 +59,7 @@ const Main = ({ mode }) => {
             </span>
             .
           </div>
-          <ParallaxDiv className="moon" speed={-0.29}>
+          <ParallaxDiv className="moon" speedX={0} speedY={-0.29}>
             <img
               src={mode ? 'images//moon.png' : 'images//sun.png'}
               alt="moon/sun"
@@ -67,26 +67,33 @@ const Main = ({ mode }) => {
           </ParallaxDiv>
         </div>
       </section>
-      <ParallaxDiv className="cloud2" speed={0.9}>
+      <ParallaxDiv className="cloud2" speedX={0} speedY={0.9}>
         <img
           src={mode ? 'images//cloud2.png' : 'images//dayCloud2.png'}
           alt="passing cloud"
         />
       </ParallaxDiv>
       <About mode={mode} />
-      <ParallaxDiv className="cloud1" speed={0.9}>
+      <ParallaxDiv className="cloud1" speedX={0} speedY={0.9}>
         <img
           src={mode ? 'images//cloud1.png' : 'images//dayCloud1.png'}
           alt="passing cloud"
         />
       </ParallaxDiv>
       <Projects mode={mode} />
-      <ParallaxDiv className="cloud2" id="cloud3" speed={0.9}>
+      <ParallaxDiv className="cloud2" id="cloud3" speedX={0} speedY={0.9}>
         <img
           src={mode ? 'images//cloud3.png' : 'images//dayCloud3.png'}
           alt="passing cloud"
         />
       </ParallaxDiv>
+      <ParallaxDiv className="cloud1" id="cloud4" speedX={0} speedY={0.9}>
+        <img
+          src={mode ? 'images//cloud4.png' : 'images//dayCloud4.png'}
+          alt="passing cloud"
+        />
+      </ParallaxDiv>
+
       <Contact mode={mode} />
       <div className="navPad"></div>
       <Landscape mode={mode} />

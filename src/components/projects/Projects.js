@@ -57,7 +57,7 @@ const Projects = ({ mode }) => {
           data-aos-duration="800"
           data-aos="fade-right"
         >
-          <Slider slides={slides[1]} />
+          <Slider mode={mode} slides={slides[1]} />
           <div className="project-info">
             <h3 className="projectTitle">Tickit</h3>
             <p>
@@ -94,7 +94,7 @@ const Projects = ({ mode }) => {
           data-aos-duration="800"
           data-aos="fade-left"
         >
-          <Slider slides={slides[2]} />
+          <Slider mode={mode} slides={slides[2]} />
           <div className="project-info">
             <h3 className="projectTitle">Picky!</h3>
             <p>

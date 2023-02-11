@@ -20,10 +20,11 @@ const ProjectsLayout = styled.section`
       .project-info {
         margin-top: 5px;
         background-color: ${({ theme, mode }) =>
-          mode ? theme.colors.darkRed : theme.colors.blue};
+          mode ? 'rgba(76,0,43,.7)' : 'rgba(103,139,229,.7)'};
         max-width: 800px;
         padding: 20px;
         border-radius: 5px;
+        // border: 1px solid white;
         width: 75%;
         color: ${({ theme, mode }) => (mode ? theme.colors.pale : 'white')};
         font-size: 1rem;
@@ -32,7 +33,7 @@ const ProjectsLayout = styled.section`
           justify-content: center;
           button {
             background-color: ${({ theme, mode }) =>
-              mode ? theme.colors.red : theme.colors.yellow};
+              mode ? theme.colors.red : '#97C8E7'};
             width: 70px;
             height: 30px;
             border: none;
@@ -41,9 +42,9 @@ const ProjectsLayout = styled.section`
             border-radius: 3px;
             font-weight: 600;
             color: ${({ theme, mode }) =>
-              mode ? theme.colors.darkRed : theme.colors.popsicle};
+              mode ? theme.colors.darkRed : 'white'};
             &:hover {
-              color: ${({ theme }) => theme.colors.pale};
+              color: ${({ theme }) => theme.colors.blue};
             }
           }
         }
@@ -53,7 +54,7 @@ const ProjectsLayout = styled.section`
           mode ? theme.colors.lightOrange : 'white'};
         span {
           color: ${({ theme, mode }) =>
-            mode ? theme.colors.orang : theme.colors.foreground};
+            mode ? theme.colors.orang : theme.colors.yellow};
         }
       }
     }

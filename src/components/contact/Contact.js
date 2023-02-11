@@ -1,8 +1,8 @@
 import ContactLayout from './Contact.layout';
 import { ContactForm } from './contactForm/ContactForm';
-const Contact = () => {
+const Contact = ({ mode }) => {
   return (
-    <ContactLayout>
+    <ContactLayout mode={mode}>
       <a class="anchor" id="contactme"></a>
       <div className="contact" id="contact">
         <h2 id="contactHeader">Contact Me!</h2>
@@ -16,10 +16,14 @@ const Contact = () => {
           <div className="contact-text">
             <p>
               I'm currently looking for a full-time role, though I'm open to
-              other opportunites. Don't hesitate to reach out with any
-              questions.
+              other opportunites. Don't hesitate to reach using the contact
+              form, or{' '}
+              <a rel="noreferrer" href="mailto: benjaminlee0727@gmail.com">
+                email me directly
+              </a>
+              .
             </p>
-            <ContactForm />
+            <ContactForm mode={mode} />
           </div>
         </div>
       </div>
