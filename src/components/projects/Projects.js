@@ -14,11 +14,12 @@ const Projects = ({ mode }) => {
         >
           Projects
         </h2>
+
         <div
           className="singleProject"
           data-aos="fade-left"
           easing="ease-out"
-          data-aos-duration="800"
+          data-aos-duration="1000"
         >
           <Slider slides={slides[0]} mode={mode} />
           <div className="project-info">
@@ -53,9 +54,9 @@ const Projects = ({ mode }) => {
         </div>
         <div
           className="singleProject"
-          easing="ease-out"
-          data-aos-duration="800"
           data-aos="fade-right"
+          easing="ease-out"
+          data-aos-duration="1000"
         >
           <Slider mode={mode} slides={slides[1]} />
           <div className="project-info">
@@ -87,12 +88,13 @@ const Projects = ({ mode }) => {
             </div>
           </div>
         </div>
+
         <div
           className="singleProject"
           id="picky"
-          easing="ease-out"
-          data-aos-duration="800"
           data-aos="fade-left"
+          easing="ease-out"
+          data-aos-duration="1000"
         >
           <Slider mode={mode} slides={slides[2]} />
           <div className="project-info">
@@ -105,6 +107,41 @@ const Projects = ({ mode }) => {
             </p>
             <p className="skills">
               <span>Technologies:</span> React, Redux, Axios, Framer Motion
+            </p>
+            <div className="button-container">
+              <a
+                href="https://youtu.be/czcKf8JNAhY"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button>Demo</button>
+              </a>
+              <a
+                href="https://github.com/benjaminglee/Picky"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button>Repo</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="singleProject"
+          id="picky"
+          data-aos="fade-right"
+          easing="ease-out"
+          data-aos-duration="1000"
+        >
+          <Slider mode={mode} slides={slides[2]} />
+          <div className="project-info">
+            <h3 className="projectTitle">My Portfolio Site</h3>
+            <p>
+              A portfolio site I built to show off some of my coding chops. Try
+              using the top left button to switch between light and dark mode!
+            </p>
+            <p className="skills">
+              <span>Technologies:</span> React, Styled Components, Email.js, AOS
             </p>
             <div className="button-container">
               <a

@@ -44,7 +44,8 @@ const ProjectsLayout = styled.section`
             color: ${({ theme, mode }) =>
               mode ? theme.colors.darkRed : 'white'};
             &:hover {
-              color: ${({ theme }) => theme.colors.blue};
+              color: ${({ theme, mode }) =>
+                mode ? theme.colors.lightOrange : theme.colors.blue};
             }
           }
         }
@@ -54,7 +55,7 @@ const ProjectsLayout = styled.section`
           mode ? theme.colors.lightOrange : 'white'};
         span {
           color: ${({ theme, mode }) =>
-            mode ? theme.colors.orang : theme.colors.yellow};
+            mode ? theme.colors.orange : theme.colors.yellow};
         }
       }
     }

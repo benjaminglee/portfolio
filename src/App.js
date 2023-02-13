@@ -5,18 +5,21 @@ import { theme } from './styles/constants';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import { useEffect } from 'react';
 
 function App() {
   const [mode, setMode] = useState(true);
+  useEffect(() => {}, []);
   return (
     <div style={{ overflowX: 'hidden' }}>
       <ThemeProvider theme={theme}>
         <GlobalStyles mode={mode} />
         <Navbar mode={mode} setMode={setMode} />
         <Main mode={mode} />
-
         <Footer mode={mode} />
       </ThemeProvider>
+      <ToastContainer />
     </div>
   );
 }

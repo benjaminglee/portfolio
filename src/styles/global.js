@@ -28,6 +28,20 @@ body {
     z-index:10;
 
   }
+  .toast-position {
+    top: 65px !important;
+  //  background-color:red;
+    border:2px solid ${({ theme, mode }) =>
+      mode ? theme.colors.orange : theme.colors.yellow};
+    font-family: 'Montserrat', sans-serif;
+    font-weight:400;
+    font-size:18px;
+    background-color: ${({ theme, mode }) =>
+      mode ? theme.colors.darkRed : theme.colors.blue};
+    color:${({ theme, mode }) =>
+      mode ? theme.colors.pale : theme.colors.white};
+    border-radius:7px;
+  }
   h2 {
     color: ${({ mode, theme }) => (mode ? theme.colors.pale : '#ffe33b')};
     font-weight: 500;

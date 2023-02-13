@@ -2,7 +2,6 @@ import Burger from './Burger';
 import NavbarLayout from './Navbar.layout';
 import { FaLinkedin, FaGithub, FaEnvelope, FaAngleUp } from 'react-icons/fa';
 import Toggle from '../toggle/Toggle';
-
 const Navbar = ({ mode, setMode }) => (
   <NavbarLayout mode={mode}>
     <div className="navbar-main">

@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import ContactFormLayout from './ContactForm.layout';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const ContactForm = ({ mode }) => {
   const form = useRef();
@@ -12,8 +14,6 @@ export const ContactForm = ({ mode }) => {
     if (input.match(validRegex)) {
       return true;
     } else {
-      alert('Invalid email address!');
-
       return false;
     }
   }
@@ -21,7 +21,19 @@ export const ContactForm = ({ mode }) => {
   const sendEmail = (e) => {
     e.preventDefault();
     const email = document.getElementById('email').value;
-    if (!ValidateEmail(email)) return;
+    if (!ValidateEmail(email)) {
+      toast.warn('Please enter a valid email address.', {
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: `${mode ? 'dark' : 'light'}`,
+        className: 'toast-position',
+      });
+      return;
+    }
     emailjs
       .sendForm(
         `${process.env.REACT_APP_SERVICE_ID}`,
@@ -31,11 +43,30 @@ export const ContactForm = ({ mode }) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           e.target.reset();
+          toast.success('Email sent!', {
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: `${mode ? 'dark' : 'light'}`,
+            className: 'toast-position',
+          });
         },
         (error) => {
           console.log(error.text);
+          toast.error('Something went wrong!', {
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: `${mode ? 'dark' : 'light'}`,
+            className: 'toast-position',
+          });
         }
       );
   };
