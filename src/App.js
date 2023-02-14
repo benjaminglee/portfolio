@@ -5,7 +5,6 @@ import { theme } from './styles/constants';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
 import { useEffect } from 'react';
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         <Main mode={mode} />
         <Footer mode={mode} />
       </ThemeProvider>
-      <ToastContainer />
     </div>
   );
 }

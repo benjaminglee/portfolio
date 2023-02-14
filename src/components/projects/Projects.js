@@ -128,17 +128,17 @@ const Projects = ({ mode }) => {
         </div>
         <div
           className="singleProject"
-          id="picky"
+          id="portfolio-site"
           data-aos="fade-right"
           easing="ease-out"
           data-aos-duration="1000"
         >
-          <Slider mode={mode} slides={slides[2]} />
+          <Slider mode={mode} slides={slides[2]} self={true} />
           <div className="project-info">
-            <h3 className="projectTitle">My Portfolio Site</h3>
+            <h3 className="projectTitle">This Portfolio Site</h3>
             <p>
-              A portfolio site I built to show off some of my coding chops. Try
-              using the top left button to switch between light and dark mode!
+              I built this site to show off some of my coding chops. Try using
+              the top left button to switch between light and dark mode!
             </p>
             <p className="skills">
               <span>Technologies:</span> React, Styled Components, Email.js, AOS

@@ -59,11 +59,11 @@ const About = ({ mode }) => {
             easing="ease-out"
             data-aos-duration="800"
           >
-            But like, what do I{' '}
+            What's my{' '}
             <span>
-              <em>do</em>
-            </span>{' '}
-            do?
+              <em>stack</em>
+            </span>
+            ?
           </h3>
           <div
             className="answer"

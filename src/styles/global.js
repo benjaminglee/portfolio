@@ -9,10 +9,6 @@ body {
     padding: 0px 0px 0px 0px; 
     font-size: 20px;
     background-color: ${({ mode }) => (mode ? '#2C0A2D' : '#46ade2')};
-    /* background: ${({ mode }) =>
-      mode
-        ? 'linear-gradient(#2C0A2D,#441828)'
-        : 'linear-gradient(#46ade2, #cce7f9)'}; */
     overflow-x: hidden;
     position:relative;
 }

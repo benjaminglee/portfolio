@@ -22,7 +22,7 @@ const SliderLayout = styled.div`
   }
   .imageContainer:hover {
     img {
-      transform: scale(1.03);
+      transform: scale(1.02);
       transition-timing-function: ease-in-out;
     }
   }

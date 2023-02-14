@@ -21,6 +21,34 @@ export const ContactForm = ({ mode }) => {
   const sendEmail = (e) => {
     e.preventDefault();
     const email = document.getElementById('email').value;
+    const senderMessage = document.getElementById('senderMessage').value;
+    const senderName = document.getElementById('senderName').value;
+    if (senderName === '') {
+      toast.warn('Please enter a name.', {
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: `${mode ? 'dark' : 'light'}`,
+        className: 'toast-position',
+      });
+      return;
+    }
+    if (senderMessage === '') {
+      toast.warn('Please enter a message.', {
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: `${mode ? 'dark' : 'light'}`,
+        className: 'toast-position',
+      });
+      return;
+    }
     if (!ValidateEmail(email)) {
       toast.warn('Please enter a valid email address.', {
         autoClose: 5000,
@@ -74,14 +102,23 @@ export const ContactForm = ({ mode }) => {
   return (
     <ContactFormLayout mode={mode}>
       <form ref={form} onSubmit={sendEmail}>
-        <input type="text" name="from_name" placeholder="Your Name" />
+        <input
+          id="senderName"
+          type="text"
+          name="from_name"
+          placeholder="Your Name"
+        />
         <input
           type="email"
           name="from_email"
           id="email"
           placeholder="Enter Your Email (required)"
         />
-        <textarea name="message" placeholder="Write message..." />
+        <textarea
+          id="senderMessage"
+          name="message"
+          placeholder="Write message..."
+        />
         <input id="emailsub" type="submit" value="Send" />
       </form>
     </ContactFormLayout>

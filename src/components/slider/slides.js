@@ -6,7 +6,6 @@ const slides = [
   ],
   [
     { src: '../../images/ecommerce1.png' },
-    { src: '../../images/ecommerce2.png' },
     { src: '../../images/ecommerce3.png' },
     { src: '../../images/ecommerce6.png' },
   ],

@@ -15,7 +15,7 @@ const Main = ({ mode }) => {
   useEffect(() => {
     Aos.init();
   }, []);
-  console.log('rerendering');
+
   return (
     <MainLayout mode={mode} theme={theme} id="mainwrapper">
       <div className="navPad"></div>
@@ -51,7 +51,7 @@ const Main = ({ mode }) => {
             <span>
               <a
                 rel="noreferrer"
-                href="https://www.linkedin.com/company/grub-runner/mycompany/"
+                href="https://www.linkedin.com/company/grub-runner"
                 target="_blank"
               >
                 Text2Order

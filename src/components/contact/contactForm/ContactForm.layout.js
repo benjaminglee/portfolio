@@ -40,6 +40,7 @@ const ContactFormLayout = styled.div`
   #emailsub {
     width: 100%;
     color: white;
+    cursor: pointer;
     background-color: ${({ theme, mode }) =>
       mode ? theme.colors.orange : theme.colors.blue};
   }

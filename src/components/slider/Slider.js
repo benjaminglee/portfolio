@@ -4,7 +4,7 @@ import { FaAngleLeft } from 'react-icons/fa';
 import { FaAngleRight } from 'react-icons/fa';
 import Circle from './Circle';
 
-const Slider = ({ slides, mode }) => {
+const Slider = ({ slides, mode, self }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const handlePrev = (e) => {
     e.preventDefault();
@@ -17,27 +17,35 @@ const Slider = ({ slides, mode }) => {
     else setCurrentIdx(0);
   };
   return (
-    <SliderLayout mode={mode}>
+    <SliderLayout mode={mode} self={self}>
       <div className="imageContainer">
         <img alt="website screenshots" src={slides[currentIdx].src} />
 
-        <div onClick={handlePrev} className="sliderButton">
-          <FaAngleLeft color="#2C0A2D" />
-        </div>
+        {self ? null : (
+          <>
+            <div onClick={handlePrev} className="sliderButton">
+              <FaAngleLeft color="#2C0A2D" />
+            </div>
 
-        <div onClick={handleNext} className="sliderButton" id="next">
-          <FaAngleRight color="#2C0A2D" />
-        </div>
+            <div onClick={handleNext} className="sliderButton" id="next">
+              <FaAngleRight color="#2C0A2D" />
+            </div>
+          </>
+        )}
       </div>
       <div className="legend">
-        {slides.map((slide, idx) => (
-          <Circle
-            idx={idx}
-            currentIdx={currentIdx}
-            setCurrentIdx={setCurrentIdx}
-            key={idx}
-          />
-        ))}
+        {self ? (
+          <div style={{ width: '100%', height: '15px' }}></div>
+        ) : (
+          slides.map((slide, idx) => (
+            <Circle
+              idx={idx}
+              currentIdx={currentIdx}
+              setCurrentIdx={setCurrentIdx}
+              key={idx}
+            />
+          ))
+        )}
       </div>
     </SliderLayout>
   );
