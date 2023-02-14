@@ -18,7 +18,8 @@ export const ContactForm = ({ mode }) => {
     }
   }
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
+    console.log('click');
     e.preventDefault();
     const email = document.getElementById('email').value;
     const senderMessage = document.getElementById('senderMessage').value;
@@ -50,7 +51,8 @@ export const ContactForm = ({ mode }) => {
       return;
     }
     if (!ValidateEmail(email)) {
-      toast.warn('Please enter a valid email address.', {
+      console.log('inValidate');
+      await toast.warn('Please enter a valid email address.', {
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,

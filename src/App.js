@@ -6,6 +6,7 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [mode, setMode] = useState(true);
@@ -18,6 +19,7 @@ function App() {
         <Main mode={mode} />
         <Footer mode={mode} />
       </ThemeProvider>
+      <ToastContainer />
     </div>
   );
 }

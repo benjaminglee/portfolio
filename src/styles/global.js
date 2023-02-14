@@ -26,7 +26,6 @@ body {
   }
   .toast-position {
     top: 65px !important;
-  //  background-color:red;
     border:2px solid ${({ theme, mode }) =>
       mode ? theme.colors.orange : theme.colors.yellow};
     font-family: 'Montserrat', sans-serif;
