@@ -7,7 +7,7 @@ const BurgerLayout = styled.div`
   top: 22px;
   right: 20px;
   display: none;
-  z-index: 2;
+  z-index: 11;
   div {
     width: 2rem;
     height: 0.25rem;
