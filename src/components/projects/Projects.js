@@ -133,7 +133,7 @@ const Projects = ({ mode }) => {
           easing="ease-out"
           data-aos-duration="1000"
         >
-          <Slider mode={mode} slides={slides[2]} self={true} />
+          <Slider mode={mode} slides={slides[3]} self={true} />
           <div className="project-info">
             <h3 className="projectTitle">This Portfolio Site</h3>
             <p>
@@ -145,14 +145,7 @@ const Projects = ({ mode }) => {
             </p>
             <div className="button-container">
               <a
-                href="https://youtu.be/czcKf8JNAhY"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button>Demo</button>
-              </a>
-              <a
-                href="https://github.com/benjaminglee/Picky"
+                href="https://github.com/benjaminglee/portfolio"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -16,7 +16,7 @@ const Contact = ({ mode }) => {
           <div className="contact-text">
             <p>
               I'm currently looking for a full-time role, though I'm open to
-              other opportunites. Don't hesitate to reach using the contact
+              other opportunites. Don't hesitate to reach out using the contact
               form, or{' '}
               <a rel="noreferrer" href="mailto: benjaminlee0727@gmail.com">
                 email me directly

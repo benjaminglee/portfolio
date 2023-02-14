@@ -13,6 +13,7 @@ const RightNavLayout = styled.div`
     }
 
     @media (max-width: 838px) {
+      z-index: 10;
       padding-top: 100px;
       display: flex;
       flex-direction: column;

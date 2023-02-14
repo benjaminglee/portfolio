@@ -10,8 +10,8 @@ const SliderLayout = styled.div`
   img {
     border: 3px solid ${({ mode }) => (mode ? '#c29895' : 'white')};
     border-radius: 10px;
-    max-width: 700px;
     width: 100%;
+    max-width: 700px;
     object-fit: scale-down;
     user-select: none;
     -moz-user-select: none;

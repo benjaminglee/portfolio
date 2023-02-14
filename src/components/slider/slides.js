@@ -17,6 +17,7 @@ const slides = [
     { src: '../../images/picky6.png' },
     { src: '../../images/picky7.png' },
   ],
+  [{ src: '../../images/profile-site-min.png' }],
 ];
 
 export default slides;

@@ -36,7 +36,7 @@ const About = ({ mode }) => {
             easing="ease-out"
             data-aos-duration="800"
           >
-            What do I do?
+            What am I like?
           </h3>
           <div
             className="answer-right"
@@ -46,7 +46,7 @@ const About = ({ mode }) => {
             data-aos-duration="800"
           >
             <p>
-              I'm a trained <span>artist</span>, an avid chess player, and an
+              I'm a trained <span>animator</span>, an avid chess player, and an
               enthusiastic hiker. I love working alongside{' '}
               <span>positive and productive</span> people. I'm a big{' '}
               <span>team player</span>, a bigger <span>problem solver</span>,
