@@ -6,7 +6,7 @@ const MainLayout = styled.div`
   z-index: -2;
   .navPad {
     width: 100%;
-    height: 60px;
+    height: 100px;
   }
   .cloud1 {
     z-index: -1;

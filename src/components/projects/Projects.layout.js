@@ -59,9 +59,6 @@ const ProjectsLayout = styled.section`
         }
       }
     }
-    #picky {
-      margin-bottom: 200px;
-    }
   }
 `;
 export default ProjectsLayout;
